@@ -22,6 +22,7 @@ module.exports = {
       company: "Minnesota Timberwolves",
       isMentor: true,
       isMentee: true,
+      isActive: false,
       createdAt: new Date(),
       updatedAt: new Date()
     },
@@ -35,6 +36,7 @@ module.exports = {
       company: "xyz startups",
       isMentor: false,
       isMentee: true,
+      isActive: true,
       createdAt: new Date(),
       updatedAt: new Date()
     },
@@ -48,6 +50,7 @@ module.exports = {
       company: "Hooli",
       isMentor: true,
       isMentee: false,
+      isActive: true,
       createdAt: new Date(),
       updatedAt: new Date()
     },
@@ -61,6 +64,7 @@ module.exports = {
       company: "711",
       isMentor: true,
       isMentee: true,
+      isActive: true,
       createdAt: new Date(),
       updatedAt: new Date()
     },
@@ -74,9 +78,25 @@ module.exports = {
       company: "McDonald's",
       isMentor: true,
       isMentee: true,
+      isActive: true,
       createdAt: new Date(),
       updatedAt: new Date()
-    }], {});
+    },
+    {
+      firstName: "Mark",
+      lastName: "Lopez",
+      email: "lopez@yahoo.com",
+      password: "sdsda",
+      phone: "3418892889",  
+      currentJob: "SDET",
+      company: "McDonald's",
+      isMentor: true,
+      isMentee: true,
+      isActive: false,
+      createdAt: new Date(),
+      updatedAt: new Date()
+    }
+  ], {});
   },
 
   down: (queryInterface, Sequelize) => {
