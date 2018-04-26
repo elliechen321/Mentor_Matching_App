@@ -18,7 +18,7 @@ export default class SideBar extends React.Component {
           <Image
             source={{
               uri:
-                "https://raw.githubusercontent.com/GeekyAnts/NativeBase-KitchenSink/master/assets/drawer-cover.png"
+                "https://images2.alphacoders.com/386/thumb-1920-38622.jpg"
             }}
             style={{
               height: 120,
@@ -38,7 +38,7 @@ export default class SideBar extends React.Component {
             }}
             source={{
               uri:
-                "https://raw.githubusercontent.com/GeekyAnts/NativeBase-KitchenSink/master/assets/logo.png"
+                "http://contabilidadeetapa.com.br/wp-content/uploads/2015/10/Logo-Default.png"
             }}
           />
           <List

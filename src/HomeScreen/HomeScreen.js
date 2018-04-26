@@ -1,6 +1,7 @@
 import React from "react";
 import { StatusBar } from "react-native";
 import {
+  AppRegistry,
   Button,
   Text,
   Container,
@@ -13,7 +14,9 @@ import {
   Left,
   Icon,
   Right,
-  Thumbnail
+  Thumbnail,
+  View,
+  Image
 } from "native-base";
 
 export default class HomeScreen extends React.Component {
@@ -38,11 +41,11 @@ export default class HomeScreen extends React.Component {
           <Card>
             <CardItem>
               <Body>
-                <Text>Chat App to talk some awesome people!</Text>
+                <Text>App Home Page, Log In, Sign Up :Example: </Text>
               </Body>
             </CardItem>
           </Card>
-          <Thumbnail source={{ uri: 'https://wa1.narvii.com/static/img/user-icon-placeholder.png' }} />
+          <Thumbnail large source={{ uri: 'https://wa1.narvii.com/static/img/user-icon-placeholder.png' }}  />
           <Button
             full
             rounded
@@ -50,7 +53,7 @@ export default class HomeScreen extends React.Component {
             style={{ marginTop: 10 }}
             onPress={() => this.props.navigation.navigate("Chat")}
           >
-            <Text>Chat With People</Text>
+            <Text>Log In</Text>
           </Button>
           <Button
             full
@@ -59,7 +62,7 @@ export default class HomeScreen extends React.Component {
             style={{ marginTop: 10 }}
             onPress={() => this.props.navigation.navigate("ProfileScreen")}
           >
-            <Text>Goto Profiles</Text>
+            <Text>Sign Up</Text>
           </Button>
         </Content>
       </Container>

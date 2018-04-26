@@ -53,6 +53,12 @@ export default class ListAvatarExample extends Component {
               <Right>
                 <Text note>3:43 pm</Text>
               </Right>
+              <Right>
+              <Button rounded info>
+            <Text>View</Text>
+          </Button>
+          </Right>
+
             </ListItem>
             <ListItem avatar>
               <Left>
@@ -65,6 +71,11 @@ export default class ListAvatarExample extends Component {
               <Right>
                 <Text note>2:31 pm</Text>
               </Right>
+              <Right>
+              <Button rounded info>
+            <Text>View</Text>
+          </Button>
+          </Right>
             </ListItem>
             <ListItem avatar>
               <Left>
@@ -77,6 +88,11 @@ export default class ListAvatarExample extends Component {
               <Right>
                 <Text note>1:56 pm</Text>
               </Right>
+              <Right>
+              <Button rounded info>
+            <Text>View</Text>
+          </Button>
+          </Right>
             </ListItem>
             <ListItem avatar>
               <Left>
@@ -89,6 +105,12 @@ export default class ListAvatarExample extends Component {
               <Right>
                 <Text note>11:01 am</Text>
               </Right>
+              <Right>
+              <Button rounded info>
+            <Text>View</Text>
+            
+          </Button>
+          </Right>
             </ListItem>
           </List>
         </Content>
