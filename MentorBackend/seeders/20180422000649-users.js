@@ -22,6 +22,9 @@ module.exports = {
       company: "Minnesota Timberwolves",
       isMentor: true,
       isMentee: true,
+      isWebDev: true,
+      isMobileDev: false,
+      isQA: false,
       isActive: false,
       createdAt: new Date(),
       updatedAt: new Date()
@@ -36,6 +39,9 @@ module.exports = {
       company: "xyz startups",
       isMentor: false,
       isMentee: true,
+      isWebDev: true,
+      isMobileDev: false,
+      isQA: false,
       isActive: true,
       createdAt: new Date(),
       updatedAt: new Date()
@@ -50,6 +56,9 @@ module.exports = {
       company: "Hooli",
       isMentor: true,
       isMentee: false,
+      isWebDev: true,
+      isMobileDev: false,
+      isQA: false,
       isActive: true,
       createdAt: new Date(),
       updatedAt: new Date()
@@ -64,6 +73,9 @@ module.exports = {
       company: "711",
       isMentor: true,
       isMentee: true,
+      isWebDev: true,
+      isMobileDev: false,
+      isQA: false,
       isActive: true,
       createdAt: new Date(),
       updatedAt: new Date()
@@ -78,6 +90,9 @@ module.exports = {
       company: "McDonald's",
       isMentor: true,
       isMentee: true,
+      isWebDev: true,
+      isMobileDev: false,
+      isQA: false,
       isActive: true,
       createdAt: new Date(),
       updatedAt: new Date()
@@ -92,6 +107,9 @@ module.exports = {
       company: "McDonald's",
       isMentor: true,
       isMentee: true,
+      isWebDev: true,
+      isMobileDev: false,
+      isQA: false,
       isActive: false,
       createdAt: new Date(),
       updatedAt: new Date()

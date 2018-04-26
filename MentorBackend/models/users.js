@@ -16,6 +16,13 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         allowNull: false
     },
+    location: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+            len: [0,100]
+        }
+    },
     phone: {
         type: DataTypes.STRING,
         allowNull: false
@@ -33,6 +40,18 @@ module.exports = (sequelize, DataTypes) => {
         defaultValue: false
     },
     isMentee: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false
+    },
+    isWebDev: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false
+    },
+    isMobileDev: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false
+    },
+    isQA: {
         type: DataTypes.BOOLEAN,
         defaultValue: false
     },

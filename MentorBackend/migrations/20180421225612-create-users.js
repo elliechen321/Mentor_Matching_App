@@ -47,6 +47,18 @@ module.exports = {
         type: Sequelize.BOOLEAN,
         defaultValue: false
     },
+    isWebDev: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false
+    },
+    isMobileDev: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false
+    },
+    isQA: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false
+    },
     isActive: {
         type: Sequelize.BOOLEAN,
         defaultValue: true

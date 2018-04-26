@@ -11,12 +11,12 @@ app.use(bodyParser.json());
 
 app.use(express.static("public"));
 
- require("./routes.js")(app);
+ require("./routes/routes.js")(app);
 
 
 
 
-db.sequelize.sync({force: false}).then(()=> {
+db.sequelize.sync({force: true}).then(()=> {
     app.listen(PORT, ()=> {
         console.log(`app is listening on port ${PORT}`);
     })
