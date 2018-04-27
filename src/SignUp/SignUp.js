@@ -51,16 +51,31 @@ export default class HomeScreen extends React.Component {
               <Label>Password</Label>
               <Input />
             </Item>
+            <Item floatingLabel last>
+              <Label>First Name</Label>
+              <Input />
+            </Item>
+            <Item floatingLabel last>
+              <Label>Last Name</Label>
+              <Input />
+            </Item>
+            <Item floatingLabel last>
+              <Label>Address</Label>
+              <Input />
+            </Item>
+            <Item floatingLabel last>
+              <Label>Occuptaion</Label>
+              <Input />
+            </Item>
+            <Item floatingLabel last>
+              <Label>Languages</Label>
+              <Input />
+            </Item>
+            <Item floatingLabel last>
+              <Label>Title</Label>
+              <Input />
+            </Item>
           </Form>
-         <Button
-            full
-            rounded
-            primary
-            style={{ marginTop: 30 }}
-            onPress={() => this.props.navigation.navigate("EditScreenOne")}
-          >
-            <Text>Log In</Text>
-          </Button>
           <Button
             full
             rounded

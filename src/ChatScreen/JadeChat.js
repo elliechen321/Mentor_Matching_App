@@ -42,7 +42,9 @@ export default class ListAvatarExample extends Component {
         </Header>
         <Content>
           <List>
-            <ListItem avatar>
+            <ListItem avatar
+            onPress={() => this.props.navigation.navigate("LucyChat")}
+            >
               <Left>
                 <Thumbnail source={{ uri: 'https://wa1.narvii.com/static/img/user-icon-placeholder.png' }} />
               </Left>
@@ -53,14 +55,11 @@ export default class ListAvatarExample extends Component {
               <Right>
                 <Text note>3:43 pm</Text>
               </Right>
-              <Right>
-              <Button rounded info>
-            <Text>View</Text>
-          </Button>
-          </Right>
 
             </ListItem>
-            <ListItem avatar>
+            <ListItem avatar
+            onPress={() => this.props.navigation.navigate("DrawerOpen")}
+            >
               <Left>
                 <Thumbnail source={{ uri: 'https://wa1.narvii.com/static/img/user-icon-placeholder.png' }} />
               </Left>
@@ -71,13 +70,10 @@ export default class ListAvatarExample extends Component {
               <Right>
                 <Text note>2:31 pm</Text>
               </Right>
-              <Right>
-              <Button rounded info>
-            <Text>View</Text>
-          </Button>
-          </Right>
             </ListItem>
-            <ListItem avatar>
+            <ListItem avatar
+            onPress={() => this.props.navigation.navigate("DrawerOpen")}
+            >
               <Left>
                 <Thumbnail source={{ uri: 'https://wa1.narvii.com/static/img/user-icon-placeholder.png' }} />
               </Left>
@@ -88,13 +84,10 @@ export default class ListAvatarExample extends Component {
               <Right>
                 <Text note>1:56 pm</Text>
               </Right>
-              <Right>
-              <Button rounded info>
-            <Text>View</Text>
-          </Button>
-          </Right>
             </ListItem>
-            <ListItem avatar>
+            <ListItem avatar
+            onPress={() => this.props.navigation.navigate("DrawerOpen")}
+            >
               <Left>
                 <Thumbnail source={{ uri: 'https://wa1.narvii.com/static/img/user-icon-placeholder.png' }} />
               </Left>
@@ -105,12 +98,6 @@ export default class ListAvatarExample extends Component {
               <Right>
                 <Text note>11:01 am</Text>
               </Right>
-              <Right>
-              <Button rounded info>
-            <Text>View</Text>
-            
-          </Button>
-          </Right>
             </ListItem>
           </List>
         </Content>
