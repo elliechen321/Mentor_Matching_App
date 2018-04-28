@@ -48,22 +48,26 @@ module.exports = (app) => {
         })
 
     })
+    app.post('/api/mentors', (req, res)=> {
+            
+        })
     
 };
 
-// let testUser =  {
-//     firstName: "Jack",
-//     lastName: "Bose",
-//     email: "hero@yahoo.com",
-//     password: "test",
-//     phone: "2193893389",
-//     currentJob: "server-side engineer",
-//     company: "xyz startups",
-//     isMentor: true,
-//     isMentee: true,
-//     createdAt: new Date(),
-//     updatedAt: new Date()
-//   }
+let testUser =  {
+    firstName: "Jack",
+    lastName: "Bose",
+    email: "hero@yahoo.com",
+    password: "test",
+    phone: "2193893389",
+    currentJob: "server-side engineer",
+    company: "xyz startups",
+    isMentor: true,
+    isMentee: true,
+    isWebDev: true,
+    createdAt: new Date(),
+    updatedAt: new Date()
+  }
 
 //   if( testUser.isMentor ? console.log("is mentor") : console.log("is not mentor"));
 
@@ -78,9 +82,7 @@ module.exports = (app) => {
         //         }).then(function(dbUser){
         //         res.json(dbUser);
         //     })
-        //     // app.post('/api/mentors', (req, res)=> {
-        //     //     db.mentor
-        //     // })
+        
         // });
 
 
