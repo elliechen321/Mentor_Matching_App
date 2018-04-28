@@ -59,20 +59,33 @@ module.exports = {
         type: DataTypes.BOOLEAN,
         defaultValue: false
     },
-    isActive: {
-        type: Sequelize.BOOLEAN,
-        defaultValue: true
+    isTest: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false
+  },
+  isData: {
+    type: DataTypes.BOOLEAN,
+    defaultValue: false
+},
+  isSecurity: {
+    type: DataTypes.BOOLEAN,
+    defaultValue: false
+},
+
+  isActive: {
+      type: Sequelize.BOOLEAN,
+      defaultValue: true
+  },
+    createdAt: {
+      allowNull: false,
+      type: Sequelize.DATE
     },
-      createdAt: {
-        allowNull: false,
-        type: Sequelize.DATE
-      },
-      updatedAt: {
-        allowNull: false,
-        type: Sequelize.DATE
-      
-      }
-    });
+    updatedAt: {
+      allowNull: false,
+      type: Sequelize.DATE
+    
+    }
+  });
   },
   down: (queryInterface, Sequelize) => {
     return queryInterface.dropTable('users');

@@ -21,7 +21,8 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         validate: {
             len: [0,100]
-        }
+        },
+        defaultValue: "unkown"
     },
     phone: {
         type: DataTypes.STRING,
@@ -55,6 +56,18 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.BOOLEAN,
         defaultValue: false
     },
+    isTest: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false
+    },
+    isData: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false
+    },
+    isSecurity: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false
+  },
     isActive: {
         type: DataTypes.BOOLEAN,
         defaultValue: true
