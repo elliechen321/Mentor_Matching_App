@@ -15,13 +15,15 @@ import {
         Right,
         Text, 
         Thumbnail,
-        Button
+        Button,
+        Item, 
+        Input
                   } from 'native-base';
-export default class ListThumbnailExample extends Component {
+export default class SearchBarExample extends Component {
   render() {
     return (
       <Container>
-          <Header>
+      <Header>
           <Left>
             <Button
               transparent
@@ -31,20 +33,19 @@ export default class ListThumbnailExample extends Component {
             </Button>
           </Left>
           <Body>
-            <Title>User 1</Title>
+            <Title>New Conversation</Title>
           </Body>
           <Right />
         </Header>
-        <Content>
-          <List>
-            <ListItem>
-              <Thumbnail square size={80} source={{ uri: 'Image URL' }} />
-              <Body>
-                <Text>Sankhadeep</Text>
-                <Text note>Its time to build a difference . .</Text>
-              </Body>
-            </ListItem>
-          </List>
+        <Content searchBar rounded>
+          <Item>
+            <Icon name="ios-search" />
+            <Input placeholder="Search" />
+            <Icon name="ios-people" />
+          </Item>
+          <Button transparent>
+            <Text>Search</Text>
+          </Button>
         </Content>
       </Container>
     );
