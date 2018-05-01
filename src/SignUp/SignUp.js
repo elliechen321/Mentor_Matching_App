@@ -86,6 +86,8 @@ export default class HomeScreen extends React.Component {
             <Text>Sign Up</Text>
           </Button>
 
+          
+
         </Content>
       </Container>
     );
