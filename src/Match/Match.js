@@ -16,32 +16,97 @@ export default class CardImageExample extends Component {
             </Button>
           </Left>
           <Body>
-            <Title>Matches</Title>
+            <Title>Matches</Title>User
           </Body>
           <Right />
         </Header>
         <Content>
           <Grid>
-            <Col style={{ backgroundColor: '#635DB7', width: 200}}>
-            <Row style={{ backgroundColor: '#00CE9F', height: 200, width: 200} } ></Row>
-            <Row style={{ backgroundColor: '#635DB7', height: 200, width: 200}}></Row>
-            <Row style={{ backgroundColor: '#00CE9F', height: 200, width: 200}}></Row>
-            <Row style={{ backgroundColor: '#635DB7', height: 200, width: 200}}></Row>
-            <Row style={{ backgroundColor: '#00CE9F', height: 200, width: 200}}></Row>
-            <Row style={{ backgroundColor: '#635DB7', height: 200, width: 200}}></Row>
-            <Row style={{ backgroundColor: '#00CE9F', height: 200, width: 200}}></Row>
-            <Row style={{ backgroundColor: '#635DB7', height: 200, width: 200}}></Row>
+            <Col style={{ width: 200}}>
+            <Row style={{  borderWidth:3,  borderWidth:3, height: 200, width: 200} } >
+            <Thumbnail source={{uri: 'https://wa1.narvii.com/static/img/user-icon-placeholder.png'}} />
+            <Text>User</Text>
+
+            </Row>
+            <Row style={{  borderWidth:3,  borderWidth:3, height: 200, width: 200}}>
+            <Thumbnail source={{uri: 'https://wa1.narvii.com/static/img/user-icon-placeholder.png'}} />
+            <Text>User</Text>
+            
+
+            </Row>
+            <Row style={{  borderWidth:3,  borderWidth:3, height: 200, width: 200}}>
+            <Thumbnail source={{uri: 'https://wa1.narvii.com/static/img/user-icon-placeholder.png'}} />
+            <Text>User</Text>
+
+            </Row>
+            <Row style={{  borderWidth:3,  borderWidth:3, height: 200, width: 200}}>
+            <Thumbnail source={{uri: 'https://wa1.narvii.com/static/img/user-icon-placeholder.png'}} />
+            <Text>User</Text>
+
+            </Row>
+            <Row style={{  borderWidth:3,  borderWidth:3, height: 200, width: 200}}>
+            <Thumbnail source={{uri: 'https://wa1.narvii.com/static/img/user-icon-placeholder.png'}} />
+            <Text>User</Text>
+
+            </Row>
+            <Row style={{  borderWidth:3,  borderWidth:3, height: 200, width: 200}}>
+            <Thumbnail source={{uri: 'https://wa1.narvii.com/static/img/user-icon-placeholder.png'}} />
+            <Text>User</Text>
+
+            </Row>
+            <Row style={{  borderWidth:3,  borderWidth:3, height: 200, width: 200}}>
+            <Thumbnail source={{uri: 'https://wa1.narvii.com/static/img/user-icon-placeholder.png'}} />
+            <Text>User</Text>
+
+            </Row>
+            <Row style={{  borderWidth:3,  borderWidth:3, height: 200, width: 200}}>
+            <Thumbnail source={{uri: 'https://wa1.narvii.com/static/img/user-icon-placeholder.png'}} />
+            <Text>User</Text>
+
+            </Row>
             </Col>
 
-            <Col style={{ backgroundColor: '#00CE9F',  width: 200}}>
-            <Row style={{ backgroundColor: '#635DB7', height: 200, width: 200}}></Row>
-            <Row style={{ backgroundColor: '#00CE9F', height: 200, width: 200}}></Row>
-            <Row style={{ backgroundColor: '#635DB7', height: 200, width: 200}}></Row>
-            <Row style={{ backgroundColor: '#00CE9F', height: 200, width: 200}}></Row>
-            <Row style={{ backgroundColor: '#635DB7', height: 200, width: 200}}></Row>
-            <Row style={{ backgroundColor: '#00CE9F', height: 200, width: 200}}></Row>
-            <Row style={{ backgroundColor: '#635DB7', height: 200, width: 200}}></Row>
-            <Row style={{ backgroundColor: '#00CE9F', height: 200, width: 200}}></Row>
+            <Col style={{   width: 200}}>
+            <Row style={{borderWidth:3,  height: 200, width: 200}}>
+            <Thumbnail source={{uri: 'https://wa1.narvii.com/static/img/user-icon-placeholder.png'}} />
+            <Text>User</Text>
+
+            </Row>
+            <Row style={{  borderWidth:3, height: 200, width: 200}}>
+            <Thumbnail source={{uri: 'https://wa1.narvii.com/static/img/user-icon-placeholder.png'}} />
+            <Text>User</Text>
+
+            </Row>
+            <Row style={{  borderWidth:3, height: 200, width: 200}}>
+            <Thumbnail source={{uri: 'https://wa1.narvii.com/static/img/user-icon-placeholder.png'}} />
+            <Text>User</Text>
+
+            </Row>
+            <Row style={{  borderWidth:3, height: 200, width: 200}}>
+            <Thumbnail source={{uri: 'https://wa1.narvii.com/static/img/user-icon-placeholder.png'}} />
+            <Text>User</Text>
+
+            </Row>
+            <Row style={{  borderWidth:3, height: 200, width: 200}}>
+            <Thumbnail source={{uri: 'https://wa1.narvii.com/static/img/user-icon-placeholder.png'}} />
+            <Text>User</Text>
+
+            </Row>
+            <Row style={{  borderWidth:3, height: 200, width: 200}}>
+            <Thumbnail source={{uri: 'https://wa1.narvii.com/static/img/user-icon-placeholder.png'}} />
+            <Text>User</Text>
+
+            </Row>
+            <Row style={{  borderWidth:3, height: 200, width: 200}}>
+            <Thumbnail source={{uri: 'https://wa1.narvii.com/static/img/user-icon-placeholder.png'}} />
+            <Text>User</Text>
+
+            </Row>
+            <Row style={{  borderWidth:3, height: 200, width: 200}}>
+            <Thumbnail source={{uri: 'https://wa1.narvii.com/static/img/user-icon-placeholder.png'}} />
+            <Text>User</Text>
+
+            </Row>
             </Col>
           </Grid>
         </Content>Row
