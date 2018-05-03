@@ -5,36 +5,66 @@ module.exports = (app, test) => {
     
     //get mentors 
     // const Op = Sequelize.Op
-    app.get('/api/mentors', (req, res)=> {
+    app.get('/api/mentors/:id', (req, res)=> {
         console.log("get route linked");
-        db.users.findAll({
+        console.log(req.params)
+        db.users.findOne({
             where: {
-                // isMentor: true,
-                // isActive: true,
-                // id: {[$gt]: 6},
-            },
+                    id: req.params.id
+            }   
+        }).then(data => {
+            // set year gap for mentor diff /
+            let years = data.yearsExperience +4;
+            db.users.findAll({
+                where: {
+                    isMentor: true,
+                    industry: data.industry,
+                    yearsExperience: {
+                        $gt: years,
+                    },
+                    isActive: true,
+                    // id: {[$gt]: 6},
+                },
+    
+             })
+             .then((data) => {
+    
+             res.json(data)
+            
+            })
 
-         })
-         .then((data) => {
-
-         res.json(data)
-        
         })
+
     });
     // get mentees
-    app.get('/api/mentees', (req, res)=> {
-        console.log("mentees route linked")
-        db.users.findAll({
+    app.get('/api/mentees/:id', (req, res)=> {
+        db.users.findOne({
             where: {
-                isActive: true,
-                isMentee: true
-            }
-        })
-        .then( data => {
+                    id: req.params.id
+            }   
+        }).then(data => {
+            // set year gap for mentor diff /
+            let years = data.yearsExperience -2;
+            db.users.findAll({
+                where: {
+                    isMentee: true,
+                    industry: data.industry,
+                    yearsExperience: {
+                        $lt: years,
+                    },
+                    isActive: true,
+                    // id: {[$gt]: 6},
+                },
+    
+             })
+             .then((data) => {
+    
+             res.json(data)
+            
+            })
 
-            res.json(data);
-
         })
+        
     })
     //get all 
     app.get('/api/all', (req, res) => {
@@ -42,15 +72,14 @@ module.exports = (app, test) => {
         console.log("all routes linked");
 
         db.users.findAll({
-            where: {
-                isActive: true
-            }
+            
         }) 
         .then( data => {
             res.json(data);
         })
 
     })
+    
     //get webdev
     app.get('/api/webdev', (req, res) => {
         
@@ -86,22 +115,22 @@ module.exports = (app, test) => {
         })
 
     })
-    app.get('/api/test', (req, res) => {
+    // app.get('/api/test', (req, res) => {
         
-        console.log("all routes linked");
+    //     console.log("all routes linked");
 
-        db.users.findAll({
-            where: {
+    //     db.users.findAll({
+    //         where: {
 
-                isTest: true,
-                isActive: true
-            }
-        }) 
-        .then( data => {
-            res.json(data);
-        })
+    //             isTest: true,
+    //             isActive: true
+    //         }
+    //     }) 
+    //     .then( data => {
+    //         res.json(data);
+    //     })
 
-    })
+    // })
 
     app.post('/api/all', (req, res) => {
         
@@ -115,18 +144,30 @@ module.exports = (app, test) => {
          
 
     })
-    app.get('/api/webDev/javascript', (req, res)=>{
-        db.webDev.findAll({
+    // app.get('/api/webDev/javascript', (req, res)=>{
+    //     db.webDev.findAll({
+    //         where: {
+    //                 javascript: {
+    //                 $gt: 3  
+    //               }
+    //         }
+    //         // include: [{
+    //         //     model: users
+    //         // }]
+    //     }).then( data => {
+    //         res.json(data);
+    //     })
+    // })
+    app.get('/api/webdev/mentors/:id', (req, res) => {
+        db.users.findAll({
             where: {
-                    javascript: {
-                    $gt: 3
-                  }
+                yearsExperience: {
+                    $gt: 7
+                },
+                isMentor: true 
             }
-            // include: [{
-            //     model: users
-            // }]
-        }).then( data => {
-            res.json(data);
+        }).then(data => {
+            res.json(data)
         })
     })
     app.get('/api/all/:id', (req, res) => {

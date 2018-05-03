@@ -18,11 +18,22 @@ module.exports = {
     email: {
         type: Sequelize.STRING, 
         allowNull: false,
-        unique: true,
         validate: {
             isEmail: true
         }
     },
+    location: {
+      type: Sequelize.STRING,
+        allowNull: false,
+        defaultValue: "unkown"
+    },
+    yearsExperience: {
+      type: Sequelize.INTEGER
+    },
+    industry: {
+      type: Sequelize.STRING,
+      allowNull: false
+  },
     password: {
         type: Sequelize.STRING,
         allowNull: false

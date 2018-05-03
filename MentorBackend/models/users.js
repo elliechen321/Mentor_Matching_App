@@ -1,13 +1,15 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   var users = sequelize.define('users', {
-
+// github and linkedin
+//src for img 
+// website 
+// years of experience 
     firstName: DataTypes.STRING,
     lastName: DataTypes.STRING, 
     email: {
         type: DataTypes.STRING, 
         allowNull: false,
-        unique: true,
         validate: {
             isEmail: true
         }
@@ -36,6 +38,9 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING, 
         allowNull: true
     },
+    yearsExperience: {
+        type: DataTypes.INTEGER
+    },
     isMentor: {
         type:DataTypes.BOOLEAN,
         defaultValue: false
@@ -44,30 +49,10 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.BOOLEAN,
         defaultValue: false
     },
-    isWebDev: {
-        type: DataTypes.BOOLEAN,
-        defaultValue: false
+    industry: {
+        type: DataTypes.STRING,
+        allowNull: false
     },
-    isMobileDev: {
-        type: DataTypes.BOOLEAN,
-        defaultValue: false
-    },
-    isQA: {
-        type: DataTypes.BOOLEAN,
-        defaultValue: false
-    },
-    isTest: {
-        type: DataTypes.BOOLEAN,
-        defaultValue: false
-    },
-    isData: {
-        type: DataTypes.BOOLEAN,
-        defaultValue: false
-    },
-    isSecurity: {
-      type: DataTypes.BOOLEAN,
-      defaultValue: false
-  },
     isActive: {
         type: DataTypes.BOOLEAN,
         defaultValue: true
