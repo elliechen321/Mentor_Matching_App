@@ -1,6 +1,10 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   var webDev = sequelize.define('webDev', {
+    userId: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0
+    },
     javascript: {
       type: DataTypes.INTEGER,
       defaultValue: 0
@@ -79,6 +83,7 @@ module.exports = (sequelize, DataTypes) => {
     },
   }, {});
   webDev.associate = function(models) {
+    webDev.belongsTo(models.users)
     // associations can be defined here
   };
   return webDev;

@@ -75,8 +75,9 @@ module.exports = (sequelize, DataTypes) => {
 
 }, {});
   users.associate = function(models) {
-    users.hasMany(models.mentor, 
-    { foreignKey: 'userId', onDelete: 'cascade'})
+    
+    users.hasMany(models.webDev, 
+        {foreignKey: 'userId', onDelete: "cascade"});
     // associations can be defined here
   };
   return users;

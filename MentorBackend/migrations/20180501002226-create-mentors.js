@@ -5,6 +5,6 @@ module.exports = {
    
     down: function(queryInterface, Sequelize) {
       // logic for reverting the changes
-      return queryInterface.dropTable('mentee');
+      return queryInterface.dropTable('mentors');
     }
   }

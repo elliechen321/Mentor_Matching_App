@@ -11,7 +11,7 @@ module.exports = (app, test) => {
             where: {
                 // isMentor: true,
                 // isActive: true,
-                id: {[$gt]: 6},
+                // id: {[$gt]: 6},
             },
 
          })
@@ -40,21 +40,15 @@ module.exports = (app, test) => {
     app.get('/api/all', (req, res) => {
         
         console.log("all routes linked");
-        db.users.create(testUser) 
-         
+
+        db.users.findAll({
+            where: {
+                isActive: true
+            }
+        }) 
         .then( data => {
             res.json(data);
         })
-        .then(
-            db.users.findAll({
-                where: {
-                    isActive: true
-                },
-                limit: 1
-            })
-
-    )   
-
 
     })
     //get webdev
@@ -109,7 +103,7 @@ module.exports = (app, test) => {
 
     })
 
-    app.post('/api/users', (req, res) => {
+    app.post('/api/all', (req, res) => {
         
         console.log("users route linked");
 
@@ -118,18 +112,59 @@ module.exports = (app, test) => {
             res.json(data);
         })
 
-    })
+         
 
-    // app.post('/api/webdev', (req, res)=> {
-    //         console.log("api/webdev post route is linked");
-    //     })
+    })
+    app.get('/api/webDev/javascript', (req, res)=>{
+        db.webDev.findAll({
+            where: {
+                    javascript: {
+                    $gt: 3
+                  }
+            }
+            // include: [{
+            //     model: users
+            // }]
+        }).then( data => {
+            res.json(data);
+        })
+    })
+    app.get('/api/all/:id', (req, res) => {
+        
+         console.log(req.params.id)
+         console.log(req.params.isMobileDev)
+        
+         db.webDev.create({
+             
+            userId: req.params.id,
+            javascript: 4,
+            python: 1
+        
+        }).then( data => {
+            console.log("data", data);
+        })
+        //     //   console.log(data.id);
+
+        //     app.post('/api/webdev', (req, res) => {
+        //         // console.log("post route hit");
+                
+
+        // })
+
+                    //   console.log(data.id);
+    
+
+    })
     
 };
 
+
+// };
+
 let testUser =  {
-    firstName: "Jack",
-    lastName: "Bose",
-    email: "hero@yahoo.com",
+    firstName: "Bill",
+    lastName: "GATES",
+    email: "GOAT@yahoo.com",
     password: "test",
     phone: "2193893389",
     currentJob: "server-side engineer",
@@ -145,6 +180,38 @@ let testUser =  {
     createdAt: new Date(),
     updatedAt: new Date()
   }
+
+  let testWeb =  {
+    userId: '',
+    javascript: 5,
+    python: 4,
+    reactJS: 3,
+    node: 4,
+    express: 5,
+    sql: 2,
+    html: 4,
+    css: 3,
+    mongoDB: 2,
+    angular: 4,
+    restAPI: 5,
+    ruby: 3,
+    php: 1,
+    go: 0,
+    meteor: 0, 
+    wordpress: 0,
+    net: 0,
+    ember: 0,
+    backbone: 0,
+    createdAt: new Date(),
+    updatedAt: new Date()
+  }
+  
+
+ /* what are you struggling with:
+ 
+    How do I get the userId to webDev table with questions?
+
+    */
 
 //   if( testUser.isMentor ? console.log("is mentor") : console.log("is not mentor"));
 
@@ -163,20 +230,3 @@ let testUser =  {
         // });
 
 
-
-//route for notActive users.
-    
-    // app.get('/api/notActive', (req, res)=> {
-    //     console.log("get route linked");
-    //     db.users.findAll({
-    //         where: {
-
-    //             isActive: false 
-    //         }
-    //      })
-    //      .then((data) => {
-
-    //      res.json(data)
-        
-    //     })
-    // });

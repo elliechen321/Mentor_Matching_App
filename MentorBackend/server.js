@@ -14,7 +14,11 @@ app.use(express.static("public"));
  require("./routes/routes.js")(app);
 
 
+ app.get('/', function(req, res){
+    console.log("located at the home")
+    res.sendFile(path.join(__dirname, '../public/index.html'));
 
+});
 
 db.sequelize.sync({force: false}).then(()=> {
     app.listen(PORT, ()=> {
