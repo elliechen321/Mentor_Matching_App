@@ -8,10 +8,13 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      mentorId: {
+      relationship: {
+        type: Sequelize.STRING
+      },
+      matchId: {
         type: Sequelize.INTEGER
       },
-      menteeId: {
+      userId: {
         type: Sequelize.INTEGER
       },
       createdAt: {

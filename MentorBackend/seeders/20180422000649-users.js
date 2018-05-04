@@ -75,7 +75,6 @@ module.exports = {
       yearsExperience: 7,
       isMentor: true,
       isMentee: true,
-      isWebDev: false,
       industry: 'webDev',
       isActive: true,
       createdAt: new Date(),
