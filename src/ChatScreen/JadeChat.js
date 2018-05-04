@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import LucyChat from "./LucyChat.js";
 import JadeChat from "./JadeChat.js";
 import NineChat from "./NineChat.js";
+import testChat from "./testChat.js";
 import { TabNavigator } from "react-navigation";
 import { 
         Container, 
