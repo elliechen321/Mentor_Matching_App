@@ -3,6 +3,20 @@ import { Image } from 'react-native';
 import { Container, Header, Content, Card, CardItem, Thumbnail, Text, Button, Icon, Left, Body, Right,
 Title, Grid, Row, Col} from 'native-base';
 export default class CardImageExample extends Component {
+   constructor(props) {
+    super(props);
+    this.state = {
+      refreshing: false,
+    };
+  }
+
+  _onRefresh() {
+    this.setState({refreshing: true});
+    fetchData().then(() => {
+      this.setState({refreshing: false});
+    });
+  }
+
   render() {
     return (
       <Container>
@@ -21,37 +35,59 @@ export default class CardImageExample extends Component {
           <Right />
         </Header>
         <Content>
+        <Button full rounded dark style={{ marginTop: 30 }}>
+            <Text>Refresh</Text>
+          </Button>
           <Grid>
             <Col style={{ width: 200}}>
             <Row style={{  borderWidth:3,  borderWidth:3, height: 200, width: 200} } >
             <Thumbnail source={{uri: 'https://wa1.narvii.com/static/img/user-icon-placeholder.png'}} />
             <Text>User</Text>
-
+            <CardItem header bordered>
+              <Text>Developer</Text>
+            </CardItem>
             </Row>
+
+            <Row rounded style={{  borderWidth:3,  height: 200, width: 200}}>
+            <Thumbnail source={{uri: 'https://wa1.narvii.com/static/img/user-icon-placeholder.png'}} />
+            <Text>User</Text>
+            <CardItem header bordered>
+              <Text>Developer</Text>
+            </CardItem>
+            </Row>
+
+            <Row rounded style={{  borderWidth:3,  borderWidth:3, height: 200, width: 200}}>
+            <Thumbnail source={{uri: 'https://wa1.narvii.com/static/img/user-icon-placeholder.png'}} />
+            <Text>User</Text>
+            <CardItem header bordered>
+              <Text>Developer</Text>
+            </CardItem>
+            </Row>
+
             <Row style={{  borderWidth:3,  borderWidth:3, height: 200, width: 200}}>
             <Thumbnail source={{uri: 'https://wa1.narvii.com/static/img/user-icon-placeholder.png'}} />
             <Text>User</Text>
-            
-
+            <CardItem header bordered>
+              <Text>Developer</Text>
+            </CardItem>
             </Row>
+
             <Row style={{  borderWidth:3,  borderWidth:3, height: 200, width: 200}}>
             <Thumbnail source={{uri: 'https://wa1.narvii.com/static/img/user-icon-placeholder.png'}} />
             <Text>User</Text>
-
+            <CardItem header bordered>
+              <Text>Developer</Text>
+            </CardItem>
             </Row>
+
             <Row style={{  borderWidth:3,  borderWidth:3, height: 200, width: 200}}>
             <Thumbnail source={{uri: 'https://wa1.narvii.com/static/img/user-icon-placeholder.png'}} />
             <Text>User</Text>
-
-            </Row>
-            <Row style={{  borderWidth:3,  borderWidth:3, height: 200, width: 200}}>
-            <Thumbnail source={{uri: 'https://wa1.narvii.com/static/img/user-icon-placeholder.png'}} />
-            <Text>User</Text>
-
-            </Row>
-            <Row style={{  borderWidth:3,  borderWidth:3, height: 200, width: 200}}>
-            <Thumbnail source={{uri: 'https://wa1.narvii.com/static/img/user-icon-placeholder.png'}} />
-            <Text>User</Text>
+            <Left>
+            <CardItem header bordered>
+              <Text>Software Engineer</Text>
+            </CardItem>
+            </Left>
 
             </Row>
             <Row style={{  borderWidth:3,  borderWidth:3, height: 200, width: 200}}>
