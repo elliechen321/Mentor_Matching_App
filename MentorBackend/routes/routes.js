@@ -49,12 +49,17 @@ module.exports = (app, test) => {
         })
     })
     //get all 
-    app.get('/api/all', (req, res) => {
+    app.get('/api/active', (req, res) => {
 
         db.users.findAll({where: {isActive: true}}) 
         .then( data => res.json(data))
     })
 
+    app.get('/api/all', (req, res) => {
+
+        db.users.findAll() 
+        .then( data => res.json(data))
+    })
     app.post('/api/all', (req, res) => {
 
         db.users.create(testUser) 
@@ -84,6 +89,26 @@ module.exports = (app, test) => {
                 userId: req.params.id
             }
         }).then( objMatched => res.json(objMatched));
+    })
+    
+    
+    app.get('/api/update/:id', (req, res) => {
+        console.log("update route hit")
+     // route for updating user information
+        db.users.update(
+            {
+                isMentor: false
+             },
+            {
+               where: {
+                   id: req.params.id
+               }
+            }
+            
+ 
+            
+        )
+    
     })
 };
 
