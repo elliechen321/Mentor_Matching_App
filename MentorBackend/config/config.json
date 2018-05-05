@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "Jordan#9357218",
+    "password": "password",
     "database": "mentor_crud_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
