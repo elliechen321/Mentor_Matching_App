@@ -1,8 +1,13 @@
 import React, { Component } from "react";
-import LucyChat from "./LucyChat.js";
-import JadeChat from "./JadeChat.js";
+import EnasChat from "./EnasChat.js";
+import Conversations from "./Conversations.js";
 import NineChat from "./NineChat.js";
-import testChat from "./testChat.js";
+import EricChat from "./EricChat.js";
+import NewChat from "./NewChat.js";
+import MattChat from "./MattChat.js";
+import AnastasiiaChat from "./AnastasiiaChat.js";
+import EllieChat from "./EllieChat.js";
+
 import { TabNavigator } from "react-navigation";
 import { 
         Container, 
@@ -44,14 +49,14 @@ export default class ListAvatarExample extends Component {
         <Content>
           <List>
             <ListItem avatar
-            onPress={() => this.props.navigation.navigate("LucyChat")}
+            onPress={() => this.props.navigation.navigate("EnasChat")}
             >
               <Left>
                 <Thumbnail source={{ uri: 'https://wa1.narvii.com/static/img/user-icon-placeholder.png' }} />
               </Left>
               <Body>
-                <Text>User 1</Text>
-                <Text note>This is an example conversation between two users</Text>
+                <Text>Enas</Text>
+                <Text note>Let's Talk</Text>
               </Body>
               <Right>
                 <Text note>3:43 pm</Text>
@@ -59,47 +64,62 @@ export default class ListAvatarExample extends Component {
 
             </ListItem>
             <ListItem avatar
-            onPress={() => this.props.navigation.navigate("DrawerOpen")}
+            onPress={() => this.props.navigation.navigate("EricChat")}
             >
               <Left>
                 <Thumbnail source={{ uri: 'https://wa1.narvii.com/static/img/user-icon-placeholder.png' }} />
               </Left>
               <Body>
-                <Text>User 2</Text>
-                <Text note>This is an example conversation between two users</Text>
+                <Text>Eric</Text>
+                <Text note>Let's Talk</Text>
               </Body>
               <Right>
                 <Text note>2:31 pm</Text>
               </Right>
             </ListItem>
             <ListItem avatar
-            onPress={() => this.props.navigation.navigate("DrawerOpen")}
+            onPress={() => this.props.navigation.navigate("MattChat")}
             >
               <Left>
                 <Thumbnail source={{ uri: 'https://wa1.narvii.com/static/img/user-icon-placeholder.png' }} />
               </Left>
               <Body>
-                <Text>User 3</Text>
-                <Text note>This is an example conversation between two users</Text>
+                <Text>Matt</Text>
+                <Text note>Lat's Talk</Text>
               </Body>
               <Right>
-                <Text note>1:56 pm</Text>
+                <Text note>8:56 am</Text>
               </Right>
             </ListItem>
             <ListItem avatar
-            onPress={() => this.props.navigation.navigate("DrawerOpen")}
+            onPress={() => this.props.navigation.navigate("AnastasiiaChat")}
             >
               <Left>
                 <Thumbnail source={{ uri: 'https://wa1.narvii.com/static/img/user-icon-placeholder.png' }} />
               </Left>
               <Body>
-                <Text>User 4</Text>
-                <Text note>This is an example conversation between two users</Text>
+                <Text>Anastasiia</Text>
+                <Text note>Let's Talk</Text>
               </Body>
               <Right>
                 <Text note>11:01 am</Text>
               </Right>
             </ListItem>
+            <ListItem avatar
+            onPress={() => this.props.navigation.navigate("EllieChat")}
+            >
+              <Left>
+                <Thumbnail source={{ uri: 'https://wa1.narvii.com/static/img/user-icon-placeholder.png' }} />
+              </Left>
+              <Body>
+                <Text>Ellie</Text>
+                <Text note>Let's Talk</Text>
+              </Body>
+              <Right>
+                <Text note>3:31 pm</Text>
+              </Right>
+            </ListItem>
+           
           </List>
         </Content>
       </Container>
