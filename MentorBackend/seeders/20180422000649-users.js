@@ -25,6 +25,9 @@ module.exports = {
       isMentor: true,
       isMentee: false,
       industry: 'mobileDev',
+      gitHub: "www.github.com",
+      linkedIn: "www.linkedin.com",
+      website: "www.googl.com",
       isActive: false,
       createdAt: new Date(),
       updatedAt: new Date()
@@ -42,6 +45,9 @@ module.exports = {
       isMentor: false,
       isMentee: true,
       industry: 'webDev',
+      gitHub: "www.github.com",
+      linkedIn: "www.linkedin.com",
+      website: "www.googl.com",
       isActive: false,
       createdAt: new Date(),
       updatedAt: new Date()
@@ -59,6 +65,9 @@ module.exports = {
       isMentor: false,
       isMentee: true,
       industry: 'webDev',
+      gitHub: "www.github.com",
+      linkedIn: "www.linkedin.com",
+      website: "www.googl.com",
       isActive: true,
       createdAt: new Date(),
       updatedAt: new Date()
@@ -76,6 +85,9 @@ module.exports = {
       isMentor: true,
       isMentee: true,
       industry: 'webDev',
+      gitHub: "www.github.com",
+      linkedIn: "www.linkedin.com",
+      website: "www.googl.com",
       isActive: true,
       createdAt: new Date(),
       updatedAt: new Date()
@@ -93,6 +105,9 @@ module.exports = {
       location: "Minneapolis",
       yearsExperience: 1,
       industry: 'webDev',
+      gitHub: "www.github.com",
+      linkedIn: "www.linkedin.com",
+      website: "www.googl.com",
       createdAt: new Date(),
       updatedAt: new Date()
     },
@@ -109,6 +124,9 @@ module.exports = {
       isMentor: true,
       isMentee: false,
       industry: 'webDev',
+      gitHub: "www.github.com",
+      linkedIn: "www.linkedin.com",
+      website: "www.googl.com",
       isActive: true,
       createdAt: new Date(),
       updatedAt: new Date()
@@ -126,6 +144,9 @@ module.exports = {
       isMentor: false,
       isMentee: true,
       industry: 'webDev',
+      gitHub: "www.github.com",
+      linkedIn: "www.linkedin.com",
+      website: "www.googl.com",
       isActive: true,
       createdAt: new Date(),
       updatedAt: new Date()
@@ -143,6 +164,9 @@ module.exports = {
       isMentor: true,
       isMentee: true,
       industry: 'webDev',
+      gitHub: "www.github.com",
+      linkedIn: "www.linkedin.com",
+      website: "www.googl.com",
       createdAt: new Date(),
       updatedAt: new Date()
     },
@@ -159,6 +183,9 @@ module.exports = {
       isMentor: true,
       isMentee: true,
       industry: 'webDev',
+      gitHub: "www.github.com",
+      linkedIn: "www.linkedin.com",
+      website: "www.googl.com",
       isActive: false,
       createdAt: new Date(),
       updatedAt: new Date()
@@ -176,6 +203,9 @@ module.exports = {
       isMentor: true,
       isMentee: false,
       industry: 'mobileDev',
+      gitHub: "www.github.com",
+      linkedIn: "www.linkedin.com",
+      website: "www.googl.com",
       isActive: true,
       createdAt: new Date(),
       updatedAt: new Date()

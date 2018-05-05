@@ -39,7 +39,8 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true
     },
     yearsExperience: {
-        type: DataTypes.INTEGER
+        type: DataTypes.INTEGER,
+        allowNull: false
     },
     isMentor: {
         type:DataTypes.BOOLEAN,
@@ -53,6 +54,24 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         allowNull: false
     },
+    gitHub: {
+        type: DataTypes.STRING,
+        allowNull: true
+    },
+    linkedIn: {
+        type: DataTypes.STRING,
+        allowNull: true
+    },
+    website: {
+        type: DataTypes.STRING,
+        allowNull: true
+    },
+    img: {
+        type: DataTypes.STRING,
+        allowNull: true,
+        defaultValue: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYYmnz1t3TxqNXf7E11sIPdQvjG3VUkXxGWBu1SIVkcTTKObHI"
+
+    },
     isActive: {
         type: DataTypes.BOOLEAN,
         defaultValue: true
@@ -61,9 +80,14 @@ module.exports = (sequelize, DataTypes) => {
 }, {});
   users.associate = function(models) {
     
-    users.hasMany(models.webDev, 
+
+    users.hasMany(models.webDev,
         {foreignKey: 'userId', onDelete: "cascade"});
-    // associations can be defined here
-  };
+    
+    users.hasMany(models.matched,
+        {foreignKey: 'userId', onDelete: "cascade"});
+   
+};
+  
   return users;
 };
