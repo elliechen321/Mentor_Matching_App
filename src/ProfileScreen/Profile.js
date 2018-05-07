@@ -1,73 +1,106 @@
-import React from "react";
-import { AppRegistry, Alert } from "react-native";
-
-import {
-  Text,
-  Container,
-  Card,
-  CardItem,
-  Body,
-  Content,
-  Header,
-  Left,
-  Right,
-  Icon,
-  Title,
-  Button,
-  H1
-} from "native-base";
-
-import { StackNavigator } from "react-navigation";
-import EditScreenOne from "./EditScreenOne.js";
-import EditScreenTwo from "./EditScreenTwo.js";
-
-export default class Profile extends React.Component {
-  componentDidMount() {
-    if (this.props.navigation.state.params !== undefined) {
-      Alert.alert("USER found", this.props.navigation.state.params.name);
-    }
-  }
+import React, { Component } from 'react';
+import { Image } from 'react-native';
+import { Container, Header, Content, Card, CardItem, Thumbnail, Text, Button, Icon, Left, Body, Right,
+Title } from 'native-base';
+export default class CardImageExample extends Component {
   render() {
     return (
       <Container>
-        <Content padder>
+        <Header>
+          <Left>
+            <Button
+              transparent
+              onPress={() => this.props.navigation.navigate("DrawerOpen")}
+            >
+              <Icon name="menu" />
+            </Button>
+          </Left>
+          <Body>
+            <Title>Profile</Title>
+          </Body>
+          <Right />
+        </Header>
+        <Content>
           <Card>
             <CardItem>
-              <Icon active name="paper-plane" />
-              <Text>Show User profiles here</Text>
+              <Left>
+                <Thumbnail source={{uri: 'https://wa1.narvii.com/static/img/user-icon-placeholder.png'}} />
+                <Body>
+                  <Text>Profile</Text>
+                  <Text note>User-1</Text>
+                </Body>
+                <Button info><Text> Edit Profile </Text></Button>
+              </Left>
+            </CardItem>
+            <CardItem cardBody>
+              <Image source={{uri: 'https://beebom-redkapmedia.netdna-ssl.com/wp-content/uploads/2016/08/How-to-type-hidden-mac-keyboard-symbols.jpg'}} style={{height: 200, width: null, flex: 1}}/>
+            </CardItem>
+            <CardItem>
+              <Left>
+                <Button transparent>
+                  <Icon active name="thumbs-up" />
+                  <Text>12 Likes</Text>
+                </Button>
+              </Left>
+              <Body>
+                <Button transparent>
+                  <Icon active name="chatbubbles" />
+                  <Text>4 Comments</Text>
+                </Button>
+              </Body>
               <Right>
-                <Icon name="close" />
+                <Text>11h ago</Text>
               </Right>
             </CardItem>
           </Card>
-          <Button
-            full
-            rounded
-            primary
-            style={{ marginTop: 10 }}
-            onPress={() => this.props.navigation.navigate("EditScreenOne")}
-          >
-            <Text>Goto EditScreen One</Text>
-          </Button>
+          <Card>
+            <CardItem header bordered>
+              <Text>About Me</Text>
+            </CardItem>
+            <CardItem bordered>
+              <Body>
+                <Text>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae lorem velit. Cras in quam eu mauris tincidunt cursus. 
+                  Quisque semper at justo eu euismod.
+                   Mauris vitae tortor cursus, pretium orci vitae, egestas quam. Duis posuere elit sed dui hendrerit dignissim.
+                   Phasellus sit amet sem ornare, tristique lectus a, malesuada augue. Sed in malesuada dolor, sit amet viverra nulla.
+                </Text>
+              </Body>
+            </CardItem>
+            <CardItem header bordered>
+              <Text>Location</Text>
+            </CardItem>
+            <CardItem bordered>
+              <Body>
+                <Text>
+                  Chicago Illinois
+                </Text>
+              </Body>
+            </CardItem>
+            <CardItem header bordered>
+              <Text>Occupation</Text>
+            </CardItem>
+            <CardItem bordered>
+              <Body>
+                <Text>
+                  Director of Technology - Microsoft
+                </Text>
+              </Body>
+            </CardItem>
+            <CardItem header bordered>
+              <Text>Years of Experience</Text>
+            </CardItem>
+            <CardItem bordered>
+              <Body>
+                <Text>
+                  10+
+                </Text>
+              </Body>
+            </CardItem>
+          </Card>
+
         </Content>
       </Container>
     );
   }
 }
-Profile.navigationOptions = ({ navigation }) => {
-  return {
-    header: (
-      <Header>
-        <Left>
-          <Button transparent onPress={() => navigation.navigate("DrawerOpen")}>
-            <Icon name="menu" />
-          </Button>
-        </Left>
-        <Body>
-          <Title>Profile</Title>
-        </Body>
-        <Right />
-      </Header>
-    )
-  };
-};
