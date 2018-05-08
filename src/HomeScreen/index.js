@@ -13,7 +13,7 @@ const HomeScreenRouter = DrawerNavigator(
     Chat: { screen: MainScreenNavigator },
     ProfileScreen: { screen: ProfileScreen },
     SignUpScreen: { screen: SignUpScreen},
-    MatchScreen: { screen: MatchScreen},
+    Match: { screen: MatchScreen},
 
     
   },

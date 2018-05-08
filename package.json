@@ -28,6 +28,7 @@
     "react-native-nav": "^2.0.2",
     "react-native-pull-to-refresh": "^2.1.3",
     "react-native-ultimate-listview": "^3.3.0",
-    "react-navigation": "^1.5.11"
+    "react-navigation": "^1.5.11",
+    "tcomb-form-native": "^0.6.11"
   }
 }
