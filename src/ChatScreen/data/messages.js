@@ -1,8 +1,8 @@
 module.exports = [
     {
       _id: Math.round(Math.random() * 1000000),
-      text: 'How are you?!',
-      createdAt: new Date(Date.UTC(2018, 3, 30, 17, 20, 0)),
+      text: 'Yes, and I use Gifted Chat!',
+      createdAt: new Date(Date.UTC(2016, 7, 30, 17, 20, 0)),
       user: {
         _id: 1,
         name: 'Developer',
@@ -16,17 +16,17 @@ module.exports = [
     },
     {
       _id: Math.round(Math.random() * 1000000),
-      text: 'Hi!',
-      createdAt: new Date(Date.UTC(2018, 3, 30, 17, 20, 0)),
+      text: 'Are you building a chat app?',
+      createdAt: new Date(Date.UTC(2016, 7, 30, 17, 20, 0)),
       user: {
         _id: 2,
-        name: 'Mentor',
+        name: 'React Native',
       },
     },
     {
       _id: Math.round(Math.random() * 1000000),
-      text: "Wellcome to the chat! Get to know your match.",
-      createdAt: new Date(Date.UTC(2018, 3, 30, 17, 20, 0)),
+      text: "You are officially rocking GiftedChat.",
+      createdAt: new Date(Date.UTC(2016, 7, 30, 17, 20, 0)),
       system: true,
     },
   ];
