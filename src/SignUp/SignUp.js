@@ -1,7 +1,11 @@
 import React from "react";
-
+// import ImagePicker from 'react-native-image-picker';
 import { 
   StatusBar, 
+  PixelRatio,
+  TouchableOpacity,
+  StyleSheet,
+  Modal
  } from "react-native";
 import {
   AppRegistry,
@@ -30,6 +34,10 @@ import {
  ListItem,
  Radio,
 } from "native-base";
+import NavBar, { NavButton, NavButtonText, NavTitle } from 'react-native-nav';
+import CameraRollPicker from 'react-native-camera-roll-picker';
+
+
 
 
  
@@ -37,19 +45,15 @@ import {
       
 export default class HomeScreen extends React.Component {
   constructor(props) {
-    super(props);
-    this.state = {
+   super(props);
+   this.state = {
       selected: undefined,
       
 
-    };
-  }
-  onValueChange(value) {
-    this.setState({
-      selected: value
-     
-    });
-  }
+   };
+
+   }
+   
   render() {
     return (
       
@@ -83,12 +87,40 @@ export default class HomeScreen extends React.Component {
             <Item floatingLabel last>
               <Label>Name</Label>
               <Input />
-            </Item>
+              </Item>
+              <TouchableOpacity
+        style={[styles.container, this.props.containerStyle]}
+        onPress={this.onActionsPress}
+      >
+      <Modal
+          animationType={'slide'}
+          transparent={false}
+          visible={this.state.modalVisible}
+          onRequestClose={() => {
+            this.setModalVisible(false);
+          }}
+        >
+          {this.renderNavBar()}
+          <CameraRollPicker
+            maximum={10}
+            imagesPerRow={4}
+            callback={this.selectImages}
+            selected={[]}
+          />
+        </Modal>
+        {this.renderIcon()}
+      </TouchableOpacity>
+    );
+  }
+}
+            {/* </Item> */}
             
-            <Item floatingLabel last>
+            {/* <Item floatingLabel last>
+          
+           
               <Label>Upload Photo</Label>
-              <Input />
-            </Item>
+              <Input /> 
+            </Item> */}
             <Picker
               mode="dropdown"
               placeholder="Choose the area of expertise"
@@ -207,3 +239,4 @@ export default class HomeScreen extends React.Component {
     );
   }
 }
+
