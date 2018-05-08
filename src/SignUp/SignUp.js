@@ -1,11 +1,15 @@
-import React from "react";
-// import ImagePicker from 'react-native-image-picker';
+import React, { Component } from "react";
+
+
+
 import { 
   StatusBar, 
   PixelRatio,
-  TouchableOpacity,
   StyleSheet,
-  Modal
+  Modal,
+  Image,
+  TouchableOpacity
+  
  } from "react-native";
 import {
   AppRegistry,
@@ -23,7 +27,6 @@ import {
   Right,
   Thumbnail,
   View,
-  Image,
   Form,
   Item,
   Label,
@@ -38,21 +41,75 @@ import NavBar, { NavButton, NavButtonText, NavTitle } from 'react-native-nav';
 import CameraRollPicker from 'react-native-camera-roll-picker';
 
 
-
-
  
 
       
 export default class HomeScreen extends React.Component {
+  
+  
+
   constructor(props) {
    super(props);
    this.state = {
-      selected: undefined,
+      selected: [],
+      num: 0
+      
       
 
    };
 
    }
+  //  getSelectedImages(images, current) {
+  //   var num = images.length;
+
+    // this.setState({
+    //   num: num,
+    //   selected: images,
+    // });
+
+  //   console.log(current);
+  //   console.log(this.state.selected);
+  // }
+     onValueChange(value) {
+        this.setState({
+           selected: value,
+           num:num,
+           selected:images,
+      
+        
+        
+        });
+     }
+     
+    
+    /**
+     * The first arg is the options object for customization (it can also be null or omitted for default options),
+     * The second arg is the callback which sends object: response (more info below in README)
+     */
+    // ImagePicker.showImagePicker(options, (response) => {
+    //   console.log('Response = ', response);
+    
+    //   if (response.didCancel) {
+    //     console.log('User cancelled image picker');
+    //   }
+    //   else if (response.error) {
+    //     console.log('ImagePicker Error: ', response.error);
+    //   }
+    //   else if (response.customButton) {
+    //     console.log('User tapped custom button: ', response.customButton);
+    //   }
+    //   else {
+    //     let source = { uri: response.uri };
+    
+        // You can also display the image using data:
+        // let source = { uri: 'data:image/jpeg;base64,' + response.data };
+    
+    //     this.setState({
+    //       avatarSource: source
+    //     });
+    //   }
+    // });
+     
    
   render() {
     return (
@@ -88,31 +145,33 @@ export default class HomeScreen extends React.Component {
               <Label>Name</Label>
               <Input />
               </Item>
-              <TouchableOpacity
-        style={[styles.container, this.props.containerStyle]}
-        onPress={this.onActionsPress}
-      >
-      <Modal
-          animationType={'slide'}
-          transparent={false}
-          visible={this.state.modalVisible}
-          onRequestClose={() => {
-            this.setModalVisible(false);
-          }}
-        >
-          {this.renderNavBar()}
-          <CameraRollPicker
-            maximum={10}
-            imagesPerRow={4}
-            callback={this.selectImages}
-            selected={[]}
-          />
-        </Modal>
-        {this.renderIcon()}
-      </TouchableOpacity>
-    );
-  }
-}
+              {/* <View style={styles.container}>
+        <TouchableHighlight>
+          <Image
+            source={require('../assets/addPhoto.png')} />
+        </TouchableHighlight>
+      </View> */}
+              {/* <View style={styles.content}>
+          <Text style={styles.text}>
+            <Text style={styles.bold}> {this.state.num} </Text> images has been selected
+          </Text>
+        </View> */}
+       
+              
+              
+              {/* <View style={styles.container}>
+              <Text style={{marginTop:20}}>
+              {this.state.num} Images selected
+              </Text>
+
+             <CameraRollPicker
+             callback={this.myImages.bind(this)}
+            />
+            </View> */}
+            
+
+
+             
             {/* </Item> */}
             
             {/* <Item floatingLabel last>
@@ -166,6 +225,10 @@ export default class HomeScreen extends React.Component {
             
             <Item floatingLabel last>
               <Label>Years of experience</Label>
+              <Input />
+            </Item> 
+            <Item floatingLabel last>
+              <Label>Would you prefer to be a mentor?</Label>
               <Input />
             </Item> 
            <Textarea rowSpan={3.5} bordered placeholder="Tell us about yourself " />
@@ -237,6 +300,13 @@ export default class HomeScreen extends React.Component {
         </Content>
       </Container>
     );
-  }
+  };
 }
 
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     justifyContent: 'center',
+//     alignItems: 'center'
+//   }
+// });
