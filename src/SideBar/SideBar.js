@@ -18,7 +18,7 @@ export default class SideBar extends React.Component {
           <Image
             source={{
               uri:
-                "https://images2.alphacoders.com/386/thumb-1920-38622.jpg"
+                "https://idunn.pro/wp-content/uploads/bfi_thumb/tech-company-growth-keyimage-mmwfazuz4jyo9fesy9w1vxpnblvo86bw8muvswp6dk.png"
             }}
             style={{
               height: 120,
@@ -38,7 +38,7 @@ export default class SideBar extends React.Component {
             }}
             source={{
               uri:
-                "http://contabilidadeetapa.com.br/wp-content/uploads/2015/10/Logo-Default.png"
+                "https://i.imgur.com/66gJs7L.png"
             }}
           />
           <List
