@@ -1,5 +1,8 @@
 {
   "expoServerPort": null,
   "packagerPort": null,
-  "packagerPid": null
+  "packagerPid": null,
+  "expoServerNgrokUrl": "https://zr-uzn.mattmurn.mentor-matching-app.exp.direct",
+  "packagerNgrokUrl": "https://packager.zr-uzn.mattmurn.mentor-matching-app.exp.direct",
+  "ngrokPid": 13540
 }

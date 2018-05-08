@@ -61,11 +61,17 @@ module.exports = (app, test) => {
         .then( data => res.json(data))
     })
     app.post('/api/all', (req, res) => {
-
+        // replace testuser with req.body
         db.users.create(testUser) 
         .then( data => res.json(data))
     })
-
+    app.get('/api/all/:id', (req, res) => {
+        db.users.findOne({
+            where:{
+                id: req.params.id
+            }
+        }).then( data => res.json(data));
+    })
     let testMatch = {
         relationship: "is Mentor",
         matchId: 4
@@ -74,6 +80,7 @@ module.exports = (app, test) => {
     }
     app.post('/api/matched/:id', (req, res) => {
         console.log(req.params)
+        //replace test data with req.params.relationship etc.
         db.matched.create({
             userId: req.params.id,
             relationship: testMatch.relationship,
