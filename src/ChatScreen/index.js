@@ -11,7 +11,7 @@ import testChat from "./testChat.js";
 import { TabNavigator } from "react-navigation";
 import {
   Button,
-  Text,
+  Text, 
   Icon,
   Item,
   Footer,
