@@ -1,9 +1,18 @@
+<<<<<<< HEAD
 import React, { Component } from "react";
 import { Auth } from 'aws-amplify'
 import { connect } from 'react-redux'
 import { createUser, confirmUserSignUp } from '../actions'
+=======
+import React from "react";
+// import ImagePicker from 'react-native-image-picker';
+>>>>>>> 53c89593c0ab1211dc9974601de3f060d1895ede
 import { 
   StatusBar, 
+  PixelRatio,
+  TouchableOpacity,
+  StyleSheet,
+  Modal
  } from "react-native";
 import {
   AppRegistry,
@@ -32,6 +41,10 @@ import {
   ListItem,
   Radio,
 } from "native-base";
+import NavBar, { NavButton, NavButtonText, NavTitle } from 'react-native-nav';
+import CameraRollPicker from 'react-native-camera-roll-picker';
+
+
 
 const initialState = {
   username: '',
@@ -44,6 +57,7 @@ const initialState = {
 class SignUp extends Component <{}> {
   state = initialState
 
+<<<<<<< HEAD
   onChangeText = (key, value) => {
     this.setState({
       [key]:value
@@ -74,6 +88,21 @@ class SignUp extends Component <{}> {
       signUpError,
       signUpErrorMessage
     }} = this.props
+=======
+      
+export default class HomeScreen extends React.Component {
+  constructor(props) {
+   super(props);
+   this.state = {
+      selected: undefined,
+      
+
+   };
+
+   }
+   
+  render() {
+>>>>>>> 53c89593c0ab1211dc9974601de3f060d1895ede
     return (
       <Container>
         <Header>
@@ -291,6 +320,7 @@ class SignUp extends Component <{}> {
     );
    }  
   }
+<<<<<<< HEAD
 
   const mapStateToProps = state => ({
     auth: state.auth
@@ -474,3 +504,7 @@ class SignUp extends Component <{}> {
 //     );
 //   }
 // }
+=======
+}
+
+>>>>>>> 53c89593c0ab1211dc9974601de3f060d1895ede
