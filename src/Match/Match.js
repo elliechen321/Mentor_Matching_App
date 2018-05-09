@@ -7,6 +7,7 @@ export default class CardImageExample extends Component {
 
   render() {
     return (
+      
          
       <Container>
         <Header>
@@ -23,9 +24,10 @@ export default class CardImageExample extends Component {
           </Body>
           <Right />
         </Header>
-        <UltimateRefreshView onRefresh={this.onRefresh}>
         <Content>
+
         <Text> Pull To Refresh </Text>
+        <UltimateRefreshView onRefresh={this.onRefresh}>
           <Grid>
             <Col style={{ width: 200}}>
             <Row style={{  borderWidth:3,  borderWidth:3, height: 200, width: 200} } >
@@ -71,10 +73,12 @@ export default class CardImageExample extends Component {
             </Row>
 
             </Col>
+
           </Grid>
+</UltimateRefreshView>
         </Content>Row
-        </UltimateRefreshView>
         </Container>
+
            
     );
   }
