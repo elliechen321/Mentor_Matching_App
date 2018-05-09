@@ -11,7 +11,7 @@ import {
 
 import ImagePicker from 'react-native-image-picker';
 
-export default class UploadPicture extends React.Component {
+export default class SignUp extends React.Component {
 
   state = {
     avatarSource: null,
