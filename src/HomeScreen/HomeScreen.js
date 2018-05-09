@@ -69,43 +69,6 @@ export default class HomeScreen extends React.Component {
 
   render() {
     return (
-//       <View style={styles.container}>
-//       <Text style={styles.welcome}>
-//         Welcome to Demo AsyncStorage!
-//       </Text>
-
-//       <TextInput
-//         style={styles.formInput}
-//         placeholder="Enter key you want to save!"
-//         value={this.state.myKey}
-//         onChangeText={(value) => this.saveKey(value)}
-//         />
-
-//       <Button
-//         style={styles.formButton}
-//         onPress={this.getKey.bind(this)}
-//         title="Get Key"
-//         color="#2196f3"
-//         accessibilityLabel="Get Key"
-//       />
-
-//       <Button
-//         style={styles.formButton}
-//         onPress={this.resetKey.bind(this)}
-//         title="Reset"
-//         color="#f44336"
-//         accessibilityLabel="Reset"
-//       />
-
-//       <Text style={styles.instructions}>
-//         Stored key is = {this.state.myKey}
-//       </Text>
-
-
-//     </View>
-//   );
-// }
-// }
       <Container>
         <Header>
           <Left>
@@ -117,17 +80,31 @@ export default class HomeScreen extends React.Component {
             </Button>
           </Left>
           <Body>
-            <Title>HomeScreen</Title>
+            <Title>MentorMatch</Title>
           </Body>
           <Right />
         </Header>
         <Content>
+          {/* <Image
+            square
+            style={{
+              height: 80,
+              width: 70,
+              position: "absolute",
+              alignSelf: "center",
+              top: 20
+            }}
+            source={{
+              uri:
+                "https://i.imgur.com/66gJs7L.png"
+            }}
+          /> */}
           <Form>
             <Item floatingLabel>
               <Label>Username</Label>
               <Input 
               value={this.state.myKey}
-        onChangeText={(value) => this.saveKey(value)} />
+              onChangeText={(value) => this.saveKey(value)} />
             </Item>
             <Item floatingLabel last>
               <Label>Password</Label>
@@ -139,7 +116,7 @@ export default class HomeScreen extends React.Component {
             full
             rounded
             primary
-            style={{ marginTop: 30 }}
+            style={styles.button}
             
 
              
@@ -151,7 +128,7 @@ export default class HomeScreen extends React.Component {
             full
             rounded
             dark
-            style={{ marginTop: 30 }}
+            style={styles.button}
             onPress={(value) => this.saveKey(value)}
            
            
@@ -164,6 +141,8 @@ export default class HomeScreen extends React.Component {
     );
   }
 }
+
+
 const styles = StyleSheet.create({
   container: {
     padding: 30,
@@ -183,6 +162,8 @@ const styles = StyleSheet.create({
     borderColor: "#555555",
   },
   formButton: {
+    marginLeft: 5,
+    marginRight: 5,
     borderWidth: 1,
     borderColor: "#555555",
   },
@@ -191,5 +172,10 @@ const styles = StyleSheet.create({
     color: '#333333',
     marginBottom: 5,
     marginTop: 5,
+  },
+  button: {
+    marginTop: 10,
+    marginLeft: 10,
+    marginRight: 10,
   },
 });
