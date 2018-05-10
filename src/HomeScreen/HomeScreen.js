@@ -1,6 +1,6 @@
 import React from "react";
-import { StatusBar, AsyncStorage,StyleSheet,TextInput } from "react-native";
-
+import { StatusBar, AsyncStorage,StyleSheet,TextInput, Alert } from "react-native";
+import Expo from "expo";
 import {
   AppRegistry,
   Button,
@@ -35,35 +35,26 @@ export default class HomeScreen extends React.Component {
     }
   }
 
-  async getKey() {
-    try {
-      const value = await AsyncStorage.getItem('@MySuperStore:key');
-      this.setState({myKey: value});
-    } catch (error) {
-      console.log("Error retrieving data" + error);
+  async logIn() {
+    const { type, token } = await Expo.Facebook.logInWithReadPermissionsAsync('588219858226492', {
+        permissions: ['public_profile'],
+      });
+    if (type === 'success') {
+      // Get the user's name using Facebook's Graph API
+      const endpoint = 'https://graph.facebook.com/me?fields=id,email,name,picture&access_token='
+      const response = await fetch(endpoint.concat(token)).then(response => response.json());
+      console.log(response)
+      console.log("hello")
     }
   }
 
-  async saveKey(value) {
-   
+  async getKey(){
     try {
-     
-      await AsyncStorage.setItem('@MySuperStore:key', value);
-      console.log("Yess")
-    } catch (error) {
-      console.log("Error saving data" + error);
-    }
-    this.props.navigation.navigate("SignUpScreen");
-  }
- 
-
-  async resetKey() {
-    try {
-      await AsyncStorage.removeItem('@MySuperStore:key');
-      const value = await AsyncStorage.getItem('@MySuperStore:key');
+      const value = await AsyncStorage.getItem('@mySuperStore:key');
       this.setState({myKey: value});
-    } catch (error) {
-      console.log("Error resetting data" + error);
+    }
+    catch (error) {
+      console.log("Error retrieving data " + error)
     }
   }
 
@@ -140,24 +131,21 @@ export default class HomeScreen extends React.Component {
             rounded
             primary
             style={{ marginTop: 30 }}
-            
-
-             
-          
+            onPress={this.logIn}     
           >
-            <Text>Log In</Text>
+            <Text>Login with Facebook</Text>
           </Button>
-          <Button
+          {/* <Button
             full
             rounded
             dark
             style={{ marginTop: 30 }}
-            onPress={(value) => this.saveKey(value)}
+            //onPress={(value) => this.saveKey(value)}
            
            
           >
             <Text>Sign Up</Text>
-          </Button>
+          </Button> */}
 
         </Content>
       </Container>
