@@ -25,7 +25,7 @@ import {
  
 } from "native-base";
 
-export default class HomeScreen extends React.Component {
+export default class Home extends React.Component {
  
 
   constructor(props) {
@@ -109,13 +109,13 @@ export default class HomeScreen extends React.Component {
             </Button>
           </Left>
           <Body>
-            <Title>HomeScreen</Title>
+            <Title>Home</Title>
           </Body>
           <Right />
         </Header>
         <Content>
           <Form>
-            <Item floatingLabel>
+            {/* <Item floatingLabel>
               <Label>Username</Label>
               <Input 
               value={this.state.myKey}
@@ -125,13 +125,13 @@ export default class HomeScreen extends React.Component {
               <Label>Password</Label>
               <Input
               />
-            </Item>
+            </Item> */}
           </Form>
          <Button
             full
             rounded
             primary
-            style={{ marginTop: 30 }}
+            style={{ marginTop: 200 }}
             onPress={this.logIn}     
           >
             <Text>Login with Facebook</Text>
