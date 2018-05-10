@@ -41,10 +41,9 @@ export default class HomeScreen extends React.Component {
       });
     if (type === 'success') {
       // Get the user's name using Facebook's Graph API
-      const response = await fetch(
-        `https://graph.facebook.com/me?fields=id,email,name&access_token=${token}`);
-      const resJSON = await response.json()
-      console.log(resJSON)
+      const endpoint = 'https://graph.facebook.com/me?fields=id,email,name,picture&access_token='
+      const response = await fetch(endpoint.concat(token)).then(response => response.json());
+      console.log(response)
       console.log("hello")
     }
   }
