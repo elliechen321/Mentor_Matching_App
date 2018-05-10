@@ -37,7 +37,7 @@ export default class HomeScreen extends React.Component {
 
 
   componentWillMount() {
-    axios.get('http://' + (IP ADDRESS) + ':3000/api/all').then(res => {
+    axios.get('http://10.102.189.177:3000/api/all').then(res => {
       console.log("AXIOS:", res.data)
     })
   }
