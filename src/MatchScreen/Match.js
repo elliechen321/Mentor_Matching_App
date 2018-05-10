@@ -1,24 +1,13 @@
 import React, { Component } from 'react';
 import { Image } from 'react-native';
 import { Container, Header, Content, Card, CardItem, Thumbnail, Text, Button, Icon, Left, Body, Right,
-Title, Grid, Row, Col} from 'native-base';
+Title, Grid, Row, Col, ListView, RefreshControl} from 'native-base';
+import {UltimateRefreshView} from "react-native-ultimate-listview";
 export default class CardImageExample extends Component {
-   constructor(props) {
-    super(props);
-    this.state = {
-      refreshing: false,
-    };
-  }
-
-  _onRefresh() {
-    this.setState({refreshing: true});
-    fetchData().then(() => {
-      this.setState({refreshing: false});
-    });
-  }
 
   render() {
     return (
+         
       <Container>
         <Header>
           <Left>
@@ -34,10 +23,9 @@ export default class CardImageExample extends Component {
           </Body>
           <Right />
         </Header>
+        <UltimateRefreshView onRefresh={this.onRefresh}>
         <Content>
-        <Button full rounded dark style={{ marginTop: 30 }}>
-            <Text>Refresh</Text>
-          </Button>
+        <Text> Pull To Refresh </Text>
           <Grid>
             <Col style={{ width: 200}}>
             <Row style={{  borderWidth:3,  borderWidth:3, height: 200, width: 200} } >
@@ -83,10 +71,13 @@ export default class CardImageExample extends Component {
             </Row>
 
             </Col>
-
           </Grid>
         </Content>Row
-      </Container>
+        </UltimateRefreshView>
+        </Container>
+           
     );
   }
+
 }
+
