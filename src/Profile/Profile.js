@@ -1,3 +1,5 @@
+
+
 import React, { Component } from "react";
 import { 
   StatusBar, 
@@ -5,7 +7,8 @@ import {
   StyleSheet,
   Modal,
   Image,
-  TouchableOpacity
+  TouchableOpacity,
+  ImageBackground
   
  } from "react-native";
 import {
@@ -56,8 +59,13 @@ export default class Home extends React.Component {
   
   render() {
     return (
-      
+      <ImageBackground source={require('./img/my-icon1.jpeg')}
+                  style={styles.backgroundImage}>
+
+                  {this.props.children}
+
       <Container>
+        
         <Header>
           <Left>
             <Button
@@ -67,12 +75,15 @@ export default class Home extends React.Component {
               <Icon name="menu" />
             </Button>
           </Left>
-          <Body style={{  }}>
-            <Title style={{fontSize:16,marginLeft:28, width:1000, height:22,fontFamily: 'Cochin',fontWeight: 'bold'}}>Let us find the perfect match for You!</Title>
+          <Body>
+          
+            <Title style={{fontSize:16,marginLeft:28, width:1000, height:22,fontFamily: 'Cochin',fontWeight: 'bold', color: '#009933'}}>Let us find the perfect Match for You!</Title>
           </Body>
+          
           <Right />
         </Header>
         <Content>
+       
           <Form>
             <Item floatingLabel> 
             
@@ -94,7 +105,7 @@ export default class Home extends React.Component {
               placeholder="Choose the area of expertise"
               iosIcon={<Icon name="ios-arrow-down-outline" />}
               placeholder="Choose the area of expertise"
-              textStyle={{ color: "#000" }}
+              textStyle={{ color: "#009933" }}
               itemStyle={{
                 backgroundColor: "#fff",
                 marginLeft: 0,
@@ -105,7 +116,7 @@ export default class Home extends React.Component {
               selectedValue={this.state.selected}
               onValueChange={this.onValueChange.bind(this)}
             >
-              <Picker.Item label="Choose your area of expertise:" value="key0" />
+              <Picker.Item label="Choose your area of expertise:" value="key0"  />
               <Picker.Item label="Web Development" value="key1" />
               <Picker.Item label="Mobile Development" value="key2" />
               <Picker.Item label="QA" value="key3" />
@@ -149,14 +160,24 @@ export default class Home extends React.Component {
             style={{ marginTop: 26 }}
             onPress={() => this.props.navigation.navigate("MatchScreen")}
           >
-            <Text>Sign Up</Text>
+            <Text></Text>
           </Button>
 
         </Content>
       </Container>
+      </ImageBackground>
     );
   };
 }
+
+const styles = StyleSheet.create({
+  backgroundImage: {
+      flex: 1,
+      width: null,
+      height: 500,
+    
+  }
+});
 
 
 
