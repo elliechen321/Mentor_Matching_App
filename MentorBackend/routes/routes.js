@@ -68,7 +68,7 @@ module.exports = (app, test) => {
     app.get('/api/all/:id', (req, res) => {
         db.users.findOne({
             where:{
-                id: req.params.id
+                facebook: req.params.facebook
             }
         }).then( data => res.json(data));
     })
