@@ -25,7 +25,7 @@ import {
  
 } from "native-base";
 
-export default class HomeScreen extends React.Component {
+export default class Home extends React.Component {
  
 
   constructor(props) {
@@ -108,51 +108,41 @@ export default class HomeScreen extends React.Component {
             </Button>
           </Left>
           <Body>
-            <Title>Mentor Match</Title>
+            <Title>Home</Title>
           </Body>
           <Right />
         </Header>
         <Content>
-        <Thumbnail
-        square
-            source={{
-              uri:
-                "https://i.imgur.com/v3x5i5T.png"
-            }}
-            style={{
-              height: 600,
-              width: "100%",
-              alignSelf: "stretch",
-              position: "absolute"
-            }}
-          />
-          <Thumbnail
-            square
-            style={{
-              height: 80,
-              width: 70,
-              position: "absolute",
-              alignSelf: "center",
-              top: 20
-            }}
-            source={{
-              uri:
-                "https://i.imgur.com/66gJs7L.png"
-            }}
-          /> 
-
+          <Form>
+            {/* <Item floatingLabel>
+              <Label>Username</Label>
+              <Input 
+              value={this.state.myKey}
+        onChangeText={(value) => this.saveKey(value)} />
+            </Item>
+            <Item floatingLabel last>
+              <Label>Password</Label>
+              <Input
+              />
+            </Item> */}
+          </Form>
          <Button
             full
             rounded
             primary
-            style={{ 
-              marginTop: 450,
-              width: "80%",
-              alignSelf: "center",
-              position: "absolute"
-
-            }}
-            onPress={() => this.props.navigation.navigate("EditScreenOne")}
+            style={{ marginTop: 200 }}
+            onPress={this.logIn}     
+          >
+            <Text>Login with Facebook</Text>
+          </Button>
+          {/* <Button
+            full
+            rounded
+            dark
+            style={{ marginTop: 30 }}
+            //onPress={(value) => this.saveKey(value)}
+           
+           
           >
             <Text>Log In With Facebook</Text>
             </Button>
