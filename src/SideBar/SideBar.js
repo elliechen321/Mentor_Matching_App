@@ -18,7 +18,7 @@ export default class SideBar extends React.Component {
           <Image
             source={{
               uri:
-                "https://idunn.pro/wp-content/uploads/bfi_thumb/tech-company-growth-keyimage-mmwfazuz4jyo9fesy9w1vxpnblvo86bw8muvswp6dk.png"
+                "https://i.imgur.com/v3x5i5T.png"
             }}
             style={{
               height: 120,
@@ -40,7 +40,7 @@ export default class SideBar extends React.Component {
               uri:
                 "https://i.imgur.com/66gJs7L.png"
             }}
-          />
+          /> 
           <List
             dataArray={routes}
             contentContainerStyle={{ marginTop: 120 }}

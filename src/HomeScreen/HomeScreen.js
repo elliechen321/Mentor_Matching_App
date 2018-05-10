@@ -74,7 +74,13 @@ export default class HomeScreen extends React.Component {
             full
             rounded
             primary
-            style={{ marginTop: 450 }}
+            style={{ 
+              marginTop: 450,
+              width: "80%",
+              alignSelf: "center",
+              position: "absolute"
+
+            }}
             onPress={() => this.props.navigation.navigate("EditScreenOne")}
           >
             <Text>Log In With Facebook</Text>
