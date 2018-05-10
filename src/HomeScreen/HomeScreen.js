@@ -108,44 +108,55 @@ export default class HomeScreen extends React.Component {
             </Button>
           </Left>
           <Body>
-            <Title>HomeScreen</Title>
+            <Title>Mentor Match</Title>
           </Body>
           <Right />
         </Header>
         <Content>
-          <Form>
-            <Item floatingLabel>
-              <Label>Username</Label>
-              <Input 
-              value={this.state.myKey}
-        onChangeText={(value) => this.saveKey(value)} />
-            </Item>
-            <Item floatingLabel last>
-              <Label>Password</Label>
-              <Input
-              />
-            </Item>
-          </Form>
+        <Thumbnail
+        square
+            source={{
+              uri:
+                "https://i.imgur.com/v3x5i5T.png"
+            }}
+            style={{
+              height: 600,
+              width: "100%",
+              alignSelf: "stretch",
+              position: "absolute"
+            }}
+          />
+          <Thumbnail
+            square
+            style={{
+              height: 80,
+              width: 70,
+              position: "absolute",
+              alignSelf: "center",
+              top: 20
+            }}
+            source={{
+              uri:
+                "https://i.imgur.com/66gJs7L.png"
+            }}
+          /> 
+
          <Button
             full
             rounded
             primary
-            style={{ marginTop: 30 }}
-            onPress={this.logIn}     
+            style={{ 
+              marginTop: 450,
+              width: "80%",
+              alignSelf: "center",
+              position: "absolute"
+
+            }}
+            onPress={() => this.props.navigation.navigate("EditScreenOne")}
           >
-            <Text>Login with Facebook</Text>
-          </Button>
-          {/* <Button
-            full
-            rounded
-            dark
-            style={{ marginTop: 30 }}
-            //onPress={(value) => this.saveKey(value)}
-           
-           
-          >
-            <Text>Sign Up</Text>
-          </Button> */}
+            <Text>Log In With Facebook</Text>
+            </Button>
+          
 
         </Content>
       </Container>

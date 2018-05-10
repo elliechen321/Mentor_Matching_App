@@ -80,4 +80,3 @@ export default class CardImageExample extends Component {
   }
 
 }
-
