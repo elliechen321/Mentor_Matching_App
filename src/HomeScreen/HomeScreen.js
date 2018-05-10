@@ -36,7 +36,11 @@ export default class HomeScreen extends React.Component {
   }
 
 
-
+  componentWillMount() {
+    axios.get('http://' + (IP ADDRESS) + ':3000/api/all').then(res => {
+      console.log("AXIOS:", res.data)
+    })
+  }
 
 
   async logIn() {
@@ -53,9 +57,9 @@ export default class HomeScreen extends React.Component {
         fullName: resJSON.name
       }
 
-      await axios.post('http://10.102.189.177:3000/api/all', userInfo).then(res => {
-        console.log("AXIOS:" + res.data)
-      })
+      // await axios.post('http://10.102.189.177:3000/api/all', userInfo).then(res => {
+      //   console.log("AXIOS:" + res.data)
+      // })
 
       console.log(resJSON)
       console.log(userInfo)

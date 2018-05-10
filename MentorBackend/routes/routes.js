@@ -4,15 +4,15 @@ module.exports = (app, test) => {
     const Op = db.Op;
     
     app.get('/api/mentors/:id', (req, res)=> {
-        // console.log("get route linked");
-        // console.log(req.params)
+        console.log("get route linked");
+        console.log(req.params)
         db.users.findOne({
             where: {
                     id: req.params.id
             }   
         }).then(data => {
             // set year gap for mentor diff /
-            let years = data.yearsExperience +4;
+            let years = data.yearsExperience +1;
             db.users.findAll({
                 where: {
                     isMentor: true,
@@ -25,6 +25,16 @@ module.exports = (app, test) => {
             })
             .then((data) => res.json(data))
         })
+
+        // db.users.findOne({
+        //     where: {
+        //             id: req.params.id
+        //     }   
+        // }).then(data => {
+        //      res.json(data);
+        // })
+
+       // res.send('here we are!')
     });
     // get mentees
     app.get('/api/mentees/:id', (req, res)=> {
