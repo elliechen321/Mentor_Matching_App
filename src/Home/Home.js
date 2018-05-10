@@ -144,8 +144,9 @@ export default class Home extends React.Component {
            
            
           >
-            <Text>Sign Up</Text>
-          </Button> */}
+            <Text>Log In With Facebook</Text>
+            </Button>
+          
 
         </Content>
       </Container>
