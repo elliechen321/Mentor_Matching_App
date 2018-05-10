@@ -5,42 +5,40 @@ module.exports = (sequelize, DataTypes) => {
 //src for img 
 // website 
 // years of experience 
-    firstName: DataTypes.STRING,
-    lastName: DataTypes.STRING, 
+    fullName: DataTypes.STRING,
+    
     email: {
         type: DataTypes.STRING, 
-        allowNull: false,
         validate: {
             isEmail: true
         }
     },
-    password: {
+    facebook: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: true,
+        unique: true
     },
+    password: {
+        type: DataTypes.STRING,    },
     location: {
         type: DataTypes.STRING,
-        allowNull: false,
         validate: {
             len: [0,100]
         },
         defaultValue: "unkown"
     },
     phone: {
-        type: DataTypes.STRING,
-        allowNull: false
+        type: DataTypes.STRING,    
     },
     currentJob: {
-        type: DataTypes.STRING,
-        allowNull: false
+        type: DataTypes.STRING,    
     },
     company: {
         type: DataTypes.STRING, 
         allowNull: true
     },
     yearsExperience: {
-        type: DataTypes.INTEGER,
-        allowNull: false
+        type: DataTypes.INTEGER    
     },
     isMentor: {
         type:DataTypes.BOOLEAN,
@@ -51,8 +49,7 @@ module.exports = (sequelize, DataTypes) => {
         defaultValue: false
     },
     industry: {
-        type: DataTypes.STRING,
-        allowNull: false
+        type: DataTypes.STRING,    
     },
     gitHub: {
         type: DataTypes.STRING,
@@ -70,17 +67,14 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         allowNull: true,
         defaultValue: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYYmnz1t3TxqNXf7E11sIPdQvjG3VUkXxGWBu1SIVkcTTKObHI"
-
     },
     isActive: {
         type: DataTypes.BOOLEAN,
         defaultValue: true
     }
-
 }, {});
   users.associate = function(models) {
     
-
     users.hasMany(models.webDev,
         {foreignKey: 'userId', onDelete: "cascade"});
     

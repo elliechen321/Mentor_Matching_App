@@ -60,9 +60,10 @@ module.exports = (app, test) => {
         db.users.findAll() 
         .then( data => res.json(data))
     })
+
     app.post('/api/all', (req, res) => {
 
-        db.users.create(testUser) 
+        db.users.create(req.body) 
         .then( data => res.json(data))
     })
 

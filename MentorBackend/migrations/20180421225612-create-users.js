@@ -11,20 +11,22 @@ module.exports = {
       userId: {
         type: Sequelize.INTEGER
       },
-      firstName: {
+      facebook: {
+        type: Sequelize.STRING,
+        unique: true
+      },
+      fullName: {
         type: Sequelize.STRING
       },
-      lastName: Sequelize.STRING, 
+
       email: {
         type: Sequelize.STRING, 
-        allowNull: false,
         validate: {
             isEmail: true
         }
       },
       location: {
         type: Sequelize.STRING,
-          allowNull: false,
           defaultValue: "unkown"
       },
       yearsExperience: {
@@ -32,20 +34,16 @@ module.exports = {
       },
       industry: {
         type: Sequelize.STRING,
-        allowNull: false
-      },
+              },
       password: {
           type: Sequelize.STRING,
-          allowNull: false
-      },
+                },
       phone: {
           type: Sequelize.STRING,
-          allowNull: false
-      },
+                },
       currentJob: {
           type: Sequelize.STRING,
-          allowNull: false
-      },
+                },
       company: {
           type: Sequelize.STRING, 
           allowNull: true
@@ -80,7 +78,7 @@ module.exports = {
           defaultValue: true
       },
       createdAt: {
-        allowNull: false,
+        
         type: Sequelize.DATE
       },
       updatedAt: {
@@ -93,3 +91,4 @@ module.exports = {
     return queryInterface.dropTable('users');
   }
 };
+

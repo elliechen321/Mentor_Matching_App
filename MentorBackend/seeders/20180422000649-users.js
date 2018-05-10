@@ -13,9 +13,9 @@ module.exports = {
       }], {});
     */
     return queryInterface.bulkInsert('users', [{
-      firstName: "Derrick",
-      lastName: "Rose",
+      fullName: "Derrick Rose",
       email: "mvp@yahoo.com",
+      facebook: "Test1",
       password: "test",
       phone: "2193892889",
       currentJob: "fullstack developer",
@@ -33,11 +33,11 @@ module.exports = {
       updatedAt: new Date()
     },
     {
-      firstName: "Rerrick",
-      lastName: "Dose",
+      fullName: "Rerrick Dose",
       email: "pmv@yahoo.com",
       password: "test",
       phone: "2193892889",
+      facebook: "Test2",
       currentJob: "fullstack developer",
       company: "Minnesota Timberwolves",
       location: "Minneapolis",
@@ -53,14 +53,14 @@ module.exports = {
       updatedAt: new Date()
     },
     {
-      firstName: "Jack",
-      lastName: "Bose",
+      fullName: "Jack Bose",
       email: "hero@yahoo.com",
       password: "test",
       phone: "2193893389",
       currentJob: "server-side engineer",
       company: "xyz startups",
       location: "Minneapolis",
+      facebook: "Test3",
       yearsExperience: 1,
       isMentor: false,
       isMentee: true,
@@ -73,8 +73,8 @@ module.exports = {
       updatedAt: new Date()
     },
     {
-      firstName: "Back",
-      lastName: "Jose",
+      fullName: "Back Jose",
+      facebook: "Test4",
       email: "oerh@yahoo.com",
       password: "test",
       phone: "2193893389",
@@ -93,10 +93,10 @@ module.exports = {
       updatedAt: new Date()
     },
     {
-      firstName: "Derrick",
-      lastName: "Rose",
+      fullName: "Derrick Rose",
       email: "dflskdh@yahoo.com",
       password: "test",
+      facebook: "Test5",
       phone: "2193892889",
       currentJob: "Product Manager",
       company: "Hooli",
@@ -112,10 +112,10 @@ module.exports = {
       updatedAt: new Date()
     },
     {
-      firstName: "Samber",
-      lastName: "Mith",
+      fullName: "Summer Saunders",
       email: "amber@gmail.com",
       password: "Test",
+      facebook: "Test6",
       phone: "3128883908",
       currentJob: "UI designer",
       location: "Minneapolis",
@@ -132,10 +132,10 @@ module.exports = {
       updatedAt: new Date()
     },
     {
-      firstName: "Smber",
-      lastName: "Amith",
+      fullName: "Smber",
       email: "Smber@gmail.com",
       password: "Test",
+      facebook: "Test7",
       phone: "3128833908",
       currentJob: "UI designer",
       company: "711",
@@ -152,11 +152,11 @@ module.exports = {
       updatedAt: new Date()
     },
     {
-      firstName: "Melonie",
-      lastName: "Chose",
+      fullName: "chose",
       email: "chose@yahoo.com",
       password: "329898test",
       phone: "3418892889",  
+      facebook: "Test9",
       currentJob: "SDET",
       company: "McDonald's",
       location: "Minneapolis",
@@ -171,14 +171,14 @@ module.exports = {
       updatedAt: new Date()
     },
     {
-      firstName: "Mark",
-      lastName: "Lopez",
+      fullName: "Lopeze",
       email: "lopez@yahoo.com",
       password: "sdsda",
       phone: "3418892889",  
       currentJob: "SDET",
       company: "McDonald's",
       location: "Chicago",
+      facebook: "Test10",
       yearsExperience: 5,
       isMentor: true,
       isMentee: true,
@@ -191,12 +191,12 @@ module.exports = {
       updatedAt: new Date()
     },
     {
-      firstName: "John",
-      lastName: "Barkley",
+      fullName: "Miller Mike",
       email: "est@yahoo.com",
       password: "test",
       phone: "219389239",
       currentJob: "Manager",
+      facebook: "Test11",
       company: "Facebook",
       location: "San Jose",
       yearsExperience: 5,
