@@ -24,6 +24,7 @@ export default class CardImageExample extends Component {
           </Body>
           <Right />
         </Header>
+        <UltimateRefreshView onRefresh={this.onRefresh}>
         <Content>
 
         <Text> Pull To Refresh </Text>
@@ -75,8 +76,8 @@ export default class CardImageExample extends Component {
             </Col>
 
           </Grid>
-</UltimateRefreshView>
         </Content>Row
+        </UltimateRefreshView>
         </Container>
 
            
