@@ -1,18 +1,13 @@
 {
   "expo": {
-<<<<<<< HEAD
     "sdkVersion": "26.0.0",
      "splash": {
   "image": "./assets/splash.png",
   "backgroundColor": "#000000"
-  }
-=======
-    "sdkVersion": "26.0.0"
   },
   "facebookScheme": "fb588219858226492",
   "facebookAppId": "588219858226492",
   "facebookDisplayName": "MMA"
->>>>>>> 72e38710f1143f05f170400bac67232d7ee2eedd
 }
 
 }
