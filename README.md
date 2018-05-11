@@ -1,8 +1,8 @@
 # Mentor Match
 
-<p align="center">
-  <img src="http://via.placeholder.com/300" alt="Bundle Analyzer example"
-       width="650" height="335">
+<p align="left">
+  <img src="https://i.imgur.com/66gJs7L.png" alt="Bundle Analyzer example"
+       width="200" height="200">
 </p>
 
 
