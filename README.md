@@ -1,4 +1,4 @@
-<p align="left">
+<p align="right">
   <img src="https://i.imgur.com/66gJs7L.png" alt="Bundle Analyzer example"
        width="200" height="200">
 </p>
