@@ -1,8 +1,30 @@
 import React, { Component } from 'react';
 import { Image } from 'react-native';
-import { Container, Header, Content, Card, CardItem, Thumbnail, Text, Button, Icon, Left, Body, Right,
-Title } from 'native-base';
+import {
+  Container, Header, Content, Card, CardItem, Thumbnail, Text, Button, Icon, Left, Body, Right,
+  Title
+} from 'native-base';
+import axios from 'axios';
+
 export default class CardImageExample extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      userProfileInfo: {
+        aboutMe: '',
+        location: '',
+        occupation: '',
+        yearsExperience: '',
+      }
+    };
+  }
+
+  function = () => {
+    axios.get('http://10.55.110.251:3000/api/all').then(res => {
+      console.log("AXIOS:", res.data)
+    })
+  }
+
   render() {
     return (
       <Container>
@@ -24,7 +46,7 @@ export default class CardImageExample extends Component {
           <Card>
             <CardItem>
               <Left>
-                <Thumbnail source={{uri: 'https://wa1.narvii.com/static/img/user-icon-placeholder.png'}} />
+                <Thumbnail source={{ uri: 'https://wa1.narvii.com/static/img/user-icon-placeholder.png' }} />
                 <Body>
                   <Text>Profile</Text>
                   <Text note>User-1</Text>
@@ -33,7 +55,7 @@ export default class CardImageExample extends Component {
               </Left>
             </CardItem>
             <CardItem cardBody>
-              <Image source={{uri: 'https://beebom-redkapmedia.netdna-ssl.com/wp-content/uploads/2016/08/How-to-type-hidden-mac-keyboard-symbols.jpg'}} style={{height: 200, width: null, flex: 1}}/>
+              <Image source={{ uri: 'https://beebom-redkapmedia.netdna-ssl.com/wp-content/uploads/2016/08/How-to-type-hidden-mac-keyboard-symbols.jpg' }} style={{ height: 200, width: null, flex: 1 }} />
             </CardItem>
             <CardItem>
               <Left>
@@ -60,7 +82,7 @@ export default class CardImageExample extends Component {
             <CardItem bordered>
               <Body>
                 <Text>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae lorem velit. Cras in quam eu mauris tincidunt cursus. 
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae lorem velit. Cras in quam eu mauris tincidunt cursus.
                   Quisque semper at justo eu euismod.
                    Mauris vitae tortor cursus, pretium orci vitae, egestas quam. Duis posuere elit sed dui hendrerit dignissim.
                    Phasellus sit amet sem ornare, tristique lectus a, malesuada augue. Sed in malesuada dolor, sit amet viverra nulla.

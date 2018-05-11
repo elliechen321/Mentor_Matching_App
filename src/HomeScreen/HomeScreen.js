@@ -31,7 +31,7 @@ export default class HomeScreen extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-        myKey: null
+        id: null
     }
   }
 
@@ -52,14 +52,17 @@ export default class HomeScreen extends React.Component {
       const response = await fetch(
         `https://graph.facebook.com/me?fields=id,email,name&access_token=${token}`);
       const resJSON = await response.json()
+      
       let userInfo = {
         facebook: resJSON.id,
         fullName: resJSON.name
       }
 
-      // await axios.post('http://10.102.189.177:3000/api/all', userInfo).then(res => {
-      //   console.log("AXIOS:" + res.data)
-      // })
+      axios.post('http://10.55.110.251:3000/api/all', userInfo).then(res => {
+        this.setState({
+          id: res.data.facebook
+        });
+      })
 
       console.log(resJSON)
       console.log(userInfo)

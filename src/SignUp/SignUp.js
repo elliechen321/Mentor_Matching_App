@@ -51,13 +51,9 @@ export default class HomeScreen extends React.Component {
    this.state = {
       selected: [],
       num: 0
-      
-      
-
-   };
-
+    };
    }
-   
+
      onValueChange(value) {
         this.setState({
            selected: value,
