@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import { StatusBar, AsyncStorage,StyleSheet,TextInput, Alert } from "react-native";
+import { StatusBar, AsyncStorage, StyleSheet, TextInput, Alert } from "react-native";
 import Expo from "expo";
 import {
   AppRegistry,
@@ -23,11 +23,11 @@ import {
   Item,
   Label,
   Input,
- 
+
 } from "native-base";
 
 export default class HomeScreen extends React.Component {
- 
+
   constructor(props) {
     super(props);
     this.state = {
@@ -45,8 +45,8 @@ export default class HomeScreen extends React.Component {
 
   async logIn() {
     const { type, token } = await Expo.Facebook.logInWithReadPermissionsAsync('588219858226492', {
-        permissions: ['public_profile'],
-      });
+      permissions: ['public_profile'],
+    });
     if (type === 'success') {
       // Get the user's name using Facebook's Graph API
       const response = await fetch(
@@ -69,10 +69,10 @@ export default class HomeScreen extends React.Component {
     }
   }
 
-  async getKey(){
+  async getKey() {
     try {
       const value = await AsyncStorage.getItem('@mySuperStore:key');
-      this.setState({myKey: value});
+      this.setState({ myKey: value });
     }
     catch (error) {
       console.log("Error retrieving data " + error)
@@ -114,9 +114,9 @@ export default class HomeScreen extends React.Component {
           <Form>
             <Item floatingLabel>
               <Label>Username</Label>
-              <Input 
-              value={this.state.myKey}
-              onChangeText={(value) => this.saveKey(value)} />
+              <Input
+                value={this.state.myKey}
+                onChangeText={(value) => this.saveKey(value)} />
             </Item>
             <Item floatingLabel last>
               <Label>Password</Label>
@@ -124,12 +124,12 @@ export default class HomeScreen extends React.Component {
               />
             </Item>
           </Form>
-         <Button
+          <Button
             full
             rounded
             primary
             style={{ marginTop: 30 }}
-            onPress={this.logIn}     
+            onPress={this.logIn}
           >
             <Text>Login with Facebook</Text>
           </Button>
