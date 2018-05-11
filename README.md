@@ -1,19 +1,19 @@
-# Mentor Match
-
 <p align="left">
   <img src="https://i.imgur.com/66gJs7L.png" alt="Bundle Analyzer example"
        width="200" height="200">
 </p>
 
+# Mentor Match
+
 <p align="center">
   <img src="https://i.imgur.com/v3x5i5T.png" alt="Bundle Analyzer example"
-       width="100" height="300">
+       width="200" height="200">
   <img src="https://i.imgur.com/v3x5i5T.png" alt="Bundle Analyzer example"
-       width="100" height="300">
+       width="200" height="200">
   <img src="https://i.imgur.com/v3x5i5T.png" alt="Bundle Analyzer example"
-       width="100" height="300">
+       width="200" height="200">
   <img src="https://i.imgur.com/v3x5i5T.png" alt="Bundle Analyzer example"
-       width="100" height="300">
+       width="200" height="200">
 </p>
 
 <!-- 
@@ -39,7 +39,7 @@
 
 ## About
 
-  Mentor Match is a full-stack mobile application that aims to connect people in tech with similar skills, but different levels of experience.
+  Mentor Match is a full-stack mobile application that aims to connect people in tech with similar skills, but different levels of experience. 
 
 ## How It Works
 
