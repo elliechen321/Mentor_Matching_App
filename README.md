@@ -5,6 +5,16 @@
        width="650" height="335">
 </p>
 
+
+<p align="center">
+	<a href="#ios">
+        	<img src="https://dl.dropboxusercontent.com/s/ck42lqeda643v02/sdversion-ios.png?dl=0" alt="iOS">
+	</a>
+	<a href="#mac-os">
+		<img src="https://dl.dropboxusercontent.com/s/2yhgx57v4alnzld/sdversion-mac.png?dl=0" alt="Mac">
+	</a>
+</p>
+
 ## Table of Contents
 
 * [About](#About)
@@ -18,30 +28,43 @@
 
 ## About
 
-If Yarn was installed when the project was initialized, then dependencies will have been installed via Yarn, and you should probably use it to run these commands as well. Unlike dependency installation, command running syntax is identical for Yarn and NPM at the time of this writing.
-
+Mentor Match is a full-stack mobile application that aims to connect people in tech with similar skills, but different levels of experience.
 
 ## How It Works
 
-If Yarn was installed when the project was initialized, then dependencies will have been installed via Yarn, and you should probably use it to run these commands as well. Unlike dependency installation, command running syntax is identical for Yarn and NPM at the time of this writing.
+ User's sign up and create a profile with current skills and work experience, and based their profile, Mentor Match will return other users that fit the Mentor / Mentee match and open a chat for users to interact.
 
 ## Technologies
-
+* JavaScript    *Node.js    *React-Native   *Native-Base       
+*Sequelize    *Express    *Expo   *MySql
 ## Instructions
+  In order to run Mentor Match locally you will need the following installed:
+
+  [Node](#https://nodejs.org/en/)
+  [MySql (windows)](#https://dev.mysql.com/downloads/workbench/)
+  [MySql (Mac)](#https://www.sequelpro.com/)
+  [Expo (https://expo.io/)][#expo]
+  
+  After you have installed those: 
+  `git clone https://github.com/elliechen321/Mentor_Matching_App.git` 
+
+  This application runs on two seperate ports, so it is important to install dependencies in both the front end and back end. 
 
 #### `react-native`
 
-Runs the [jest](https://github.com/facebook/jest) test runner on your tests.
+from bash / terminal run the following:
 
-#### Express-Node-Server `express-node-server`
+`cd Mentor_Matching_App` 
 
-Like `npm start`, but also attempts to open your app in the iOS Simulator if you're on a Mac and have it installed.
+`npm install` 
+
 
 #### Expo `expo`
 
-Like `npm start`, but also attempts to open your app on a connected Android device or emulator. Requires an installation of Android build tools (see [React Native docs](https://facebook.github.io/react-native/docs/getting-started.html) for detailed setup). We also recommend installing Genymotion as your Android emulator. Once you've finished setting up the native build environment, there are two options for making the right copy of `adb` available to Create React Native App:
+`npm install exp --global`
 
-##### MySql `mysql`
 
-1. Make sure that you can run adb from your terminal.
-2. Open Genymotion and navigate to `Settings -> ADB`. Select “Use custom Android SDK tools” and update with your [Android SDK directory](https://stackoverflow.com/questions/25176594/android-sdk-location).
+
+#### Express-Node-Server `express-node-server`
+
+`npm install`
