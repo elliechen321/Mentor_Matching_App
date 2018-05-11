@@ -5,7 +5,7 @@
        width="200" height="200">
 </p>
 
-
+<!-- 
 <p align="center">
 	<a href="#ios">
         	<img src="https://dl.dropboxusercontent.com/s/ck42lqeda643v02/sdversion-ios.png?dl=0" alt="iOS">
@@ -13,7 +13,7 @@
 	<a href="#mac-os">
 		<img src="https://dl.dropboxusercontent.com/s/2yhgx57v4alnzld/sdversion-mac.png?dl=0" alt="Mac">
 	</a>
-</p>
+</p> -->
 
 ## Table of Contents
 
