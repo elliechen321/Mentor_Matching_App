@@ -1,16 +1,17 @@
 import React, { Component } from "react";
-import ProfileScreen from "../ProfileScreen/Profile.js";
+import Profile from "../Profile/Profile.js";
 import SignUpScreen from "../SignUp/SignUp.js";
-import MatchScreen from '../MatchScreen/index.js';
+import Match from '../Match/Match.js';
 import { StackNavigator } from "react-navigation";
+
 export default (DrawNav = StackNavigator(
   {
-    ProfileScreen: { screen: ProfileScreen },
+    Profile: { screen: Profile },
     SignUpScreen: { screen: SignUpScreen},
-    // MatchScreen: { screen: MatchScreen}
+    Match: { screen: Match},
     
   },
   {
-    initialRouteName: "ProfileScreen"
+    initialRouteName: "Match"
   }
 ));

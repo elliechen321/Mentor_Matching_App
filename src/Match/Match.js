@@ -3,7 +3,7 @@ import { Image } from 'react-native';
 import { Container, Header, Content, Card, CardItem, Thumbnail, Text, Button, Icon, Left, Body, Right,
 Title, Grid, Row, Col, ListView, RefreshControl} from 'native-base';
 import {UltimateRefreshView} from "react-native-ultimate-listview";
-export default class CardImageExample extends Component {
+export default class Home extends Component {
 
   render() {
     return (
@@ -19,7 +19,7 @@ export default class CardImageExample extends Component {
             </Button>
           </Left>
           <Body>
-            <Title>Matches</Title>User
+            <Title>Matches</Title>
           </Body>
           <Right />
         </Header>
@@ -80,4 +80,3 @@ export default class CardImageExample extends Component {
   }
 
 }
-
