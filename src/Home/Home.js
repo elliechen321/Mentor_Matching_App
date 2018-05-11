@@ -36,11 +36,11 @@ export default class Home extends React.Component {
     }
   }
 
-  componentWillMount() {
-    axios.get('http://10.55.110.251:3000/api/all').then(res => {
-      console.log("AXIOS:", res.data)
-    })
-  }
+  // componentWillMount() {
+  //   axios.get('http://10.55.110.251:3000/api/all').then(res => {
+  //     console.log("AXIOS:", res.data)
+  //   })
+  // }
 
   async logIn() {
     const { type, token } = await Expo.Facebook.logInWithReadPermissionsAsync('588219858226492', {

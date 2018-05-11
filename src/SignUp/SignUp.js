@@ -51,23 +51,9 @@ export default class HomeScreen extends React.Component {
    this.state = {
       selected: [],
       num: 0
-      
-      
-
-   };
-
+    };
    }
-  //  getSelectedImages(images, current) {
-  //   var num = images.length;
 
-    // this.setState({
-    //   num: num,
-    //   selected: images,
-    // });
-
-  //   console.log(current);
-  //   console.log(this.state.selected);
-  // }
      onValueChange(value) {
         this.setState({
            selected: value,
@@ -78,6 +64,13 @@ export default class HomeScreen extends React.Component {
         
         });
      }
+
+
+     signUpNavigate = () => {
+      axios.put('http://10.55.110.251:3000/api/all').then(res => {
+        console.log("AXIOS:", res.data)
+      })
+     } 
      
     
     /**

@@ -1,5 +1,4 @@
-
-
+import axios from "axios";
 import React, { Component } from "react";
 import { 
   StatusBar, 
@@ -48,13 +47,20 @@ export default class Home extends React.Component {
    };
 
    }
-     onValueChange(value) {
+
+   componentDidMount() {
+     axios.get('https://graph.facebook.com/endpoint?key=value&access_token=app_id%7Capp_secret')
+      .then(res => console.log(res))
+   }
+
+
+    onValueChange(value) {
         this.setState({
            selected: value,
           //  num:num,
           //  selected:images,    
         });
-     }
+    }
      
   
   render() {
