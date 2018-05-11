@@ -49,9 +49,12 @@
   In order to run Mentor Match locally you will need the following installed:
 
   [Node](https://nodejs.org/en/)
+
   [MySql (windows)](https://dev.mysql.com/downloads/workbench/)
+  
   [MySql (Mac)](https://www.sequelpro.com/)
-  [Expo (https://expo.io/)][#expo]
+  
+  [Expo](https://expo.io/)
   
   After you have installed those: 
 
