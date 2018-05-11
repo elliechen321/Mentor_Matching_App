@@ -160,7 +160,7 @@ export default class Home extends React.Component {
             style={{ marginTop: 26 }}
             onPress={() => this.props.navigation.navigate("MatchScreen")}
           >
-            <Text></Text>
+            <Text>Submit</Text>
           </Button>
 
         </Content>
