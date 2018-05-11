@@ -1,4 +1,4 @@
-#Mentor Match
+# Mentor Match
 
 <p align="center">
   <img src="http://via.placeholder.com/300" alt="Bundle Analyzer example"
@@ -28,43 +28,85 @@
 
 ## About
 
-Mentor Match is a full-stack mobile application that aims to connect people in tech with similar skills, but different levels of experience.
+  Mentor Match is a full-stack mobile application that aims to connect people in tech with similar skills, but different levels of experience.
 
 ## How It Works
 
- User's sign up and create a profile with current skills and work experience, and based their profile, Mentor Match will return other users that fit the Mentor / Mentee match and open a chat for users to interact.
+  User's sign up and create a profile with current skills and work experience, and based their profile, Mentor Match will return other users that fit the Mentor / Mentee match and open a chat for users to interact.
 
 ## Technologies
-* JavaScript    *Node.js    *React-Native   *Native-Base       
-*Sequelize    *Express    *Expo   *MySql
+
+  * JavaScript    
+  * Node.js    
+  * React-Native   
+  * Native-Base       
+  * Sequelize    
+  * Express    
+  * Expo   
+  * MySql
+
 ## Instructions
   In order to run Mentor Match locally you will need the following installed:
 
-  [Node](#https://nodejs.org/en/)
-  [MySql (windows)](#https://dev.mysql.com/downloads/workbench/)
-  [MySql (Mac)](#https://www.sequelpro.com/)
+  [Node](https://nodejs.org/en/)
+  [MySql (windows)](https://dev.mysql.com/downloads/workbench/)
+  [MySql (Mac)](https://www.sequelpro.com/)
   [Expo (https://expo.io/)][#expo]
   
   After you have installed those: 
+
   `git clone https://github.com/elliechen321/Mentor_Matching_App.git` 
 
   This application runs on two seperate ports, so it is important to install dependencies in both the front end and back end. 
 
 #### `react-native`
 
-from bash / terminal run the following:
+  From bash / terminal run the following:
 
-`cd Mentor_Matching_App` 
+  `cd Mentor_Matching_App`  or cd into whatever directory you cloned the git repo into.
 
-`npm install` 
+  `npm install` 
 
 
 #### Expo `expo`
 
-`npm install exp --global`
+Expo is a toolchain built for react-native development. In order to run Mentor Match, your phone and computer will need to be on the same network.
+Checkout the [docs] if you encounter any problems. (https://expo.io/learn)
 
+`npm install exp --global`
 
 
 #### Express-Node-Server `express-node-server`
 
+`cd MentorBackend`
+
+open `config/config.json`
+
+Enter your mysql password into the development object.
+
+```
+ {
+  "development": {
+    "username": "root",
+    "password": "<YOUR PASSWORD HERE>", 
+    "database": "mentor_crud_db",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+``` 
+Run the following commands to get install dependencies for the back end.
+
 `npm install`
+
+Initialize a local database / run migration and seed files.
+
+`sequelize db:create mentor_crud_db`
+
+`sequelize db:migrate`
+
+`sequelize db:seed:all`
+
+Start the express server.
+
+`node server.js`
+
