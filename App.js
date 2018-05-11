@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { View } from "react-native";
-import { Container, Content, Picker, Button, Text } from "native-base";
+import { Container, Content, Picker, Button, Text, Image } from "native-base";
 import Expo from "expo";
 
-import HomeScreen from "./src/HomeScreen/index.js";
+import Home from "./src/Home/index.js";
 //import Welcome from './src/react-native-auth-starter/index.js'
 export default class AwesomeApp extends Component {
   constructor() {
@@ -25,6 +25,6 @@ export default class AwesomeApp extends Component {
     if (!this.state.isReady) {
       return <Expo.AppLoading />;
     }
-    return <HomeScreen />;
+    return <Home />;
   }
 }

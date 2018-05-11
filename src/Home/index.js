@@ -1,19 +1,19 @@
 import React, { Component } from "react";
-import HomeScreen from "./HomeScreen.js";
+import Home from "./Home.js";
 import ChatScreen from "../ChatScreen/index.js";
-import ProfileScreen from "../ProfileScreen/index.js";
+import Profile from "../Profile/index.js";
 import SideBar from "../SideBar/SideBar.js";
-import MatchScreen from "../MatchScreen/index.js";
+import Match from "../Match/index.js";
 import SignUpScreen from "../SignUp/SignUp.js";
 import { DrawerNavigator } from "react-navigation";
 
 const HomeScreenRouter = DrawerNavigator(
   {
-    Home: { screen: HomeScreen },
+    Home: { screen: Home },
     Chat: { screen: MainScreenNavigator },
-    ProfileScreen: { screen: ProfileScreen },
+    Profile: { screen: Profile },
     SignUpScreen: { screen: SignUpScreen},
-    MatchScreen: { screen: MatchScreen},
+    Match: { screen: Match},
 
     
   },

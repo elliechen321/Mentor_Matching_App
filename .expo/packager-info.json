@@ -1,8 +1,8 @@
 {
   "expoServerPort": 19000,
-  "packagerPort": 19001,
-  "packagerPid": 6496,
+  "packagerPort": 19002,
+  "packagerPid": 7780,
   "expoServerNgrokUrl": "https://sm-ax9.ericsolner.mentor-matching-app.exp.direct",
   "packagerNgrokUrl": "https://packager.sm-ax9.ericsolner.mentor-matching-app.exp.direct",
-  "ngrokPid": 6510
+  "ngrokPid": 7794
 }
