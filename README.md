@@ -4,30 +4,24 @@
 
 # Mentor Match
 
-<!-- <p align="left">
-  <img src="https://i.imgur.com/v3x5i5T.png" alt="Bundle Analyzer example"
-       width="200" height="200">
-  <img src="https://i.imgur.com/v3x5i5T.png" alt="Bundle Analyzer example"
-       width="200" height="200">
-  <img src="https://i.imgur.com/v3x5i5T.png" alt="Bundle Analyzer example"
-       width="200" height="200">
-  <img src="https://i.imgur.com/v3x5i5T.png" alt="Bundle Analyzer example"
-       width="200" height="200">
-</p> -->
+Mentor Match is a mobile application for both professionals seeking mentorship and those looking to pay their expertise forward.
+<p align="left">
+ <a href="https://badge.fury.io/js/react-native"><img src="https://badge.fury.io/js/react-native.svg" alt="npm version" height="18"></a>
+ <a href="https://badge.fury.io/js/native-base"><img src="https://badge.fury.io/js/native-base.svg" alt="npm version" height="18"></a>
+ <a href="https://badge.fury.io/js/expo"><img src="https://badge.fury.io/js/expo.svg" alt="npm version" height="18"></a>
+ <a href="https://badge.fury.io/js/sequelize"><img src="https://badge.fury.io/js/sequelize.svg" alt="npm version" height="18"></a>
+</p>
 
-<!-- 
-<p align="center">
-	<a href="#ios">
-        	<img src="https://dl.dropboxusercontent.com/s/ck42lqeda643v02/sdversion-ios.png?dl=0" alt="iOS">
-	</a>
-	<a href="#mac-os">
-		<img src="https://dl.dropboxusercontent.com/s/2yhgx57v4alnzld/sdversion-mac.png?dl=0" alt="Mac">
-	</a>
-</p> -->
+<p align="left">
+
+  <img src="./img/homescreen.png" alt="Bundle Analyzer example"
+       width="200" height="200">
+</p>
+
 
 ## Table of Contents
 
-* [About](#About)
+
 * [How It Works](#how-it-works)
 * [Technologies](#Technologies)
 * [Instructions](#Instructions)
@@ -36,9 +30,7 @@
   * [expo](#expo)
   * [mysql](#mysql)
 
-## About
 
-Mentor Match is a mobile application for both professionals seeking mentorship and those looking to pay their expertise forward.
 
 ## How It Works
 
@@ -98,7 +90,7 @@ open `config/config.json`
 Enter your mysql password into the development object.
 
 ```
- {
+ {git 
   "development": {
     "username": "root",
     "password": "<YOUR PASSWORD HERE>", 
