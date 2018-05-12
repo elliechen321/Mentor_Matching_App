@@ -78,7 +78,7 @@ Mentor Match is a mobile application for both professionals seeking mentorship a
 
   `cd Mentor_Matching_App`  or cd into whatever directory you cloned the git repo into.
 
-  `npm install` 
+  `npm install`  to run for react-native dependencies.
 
 
 #### Expo `expo`
