@@ -11,11 +11,19 @@ Mentor Match is a mobile application for both professionals seeking mentorship a
  <a href="https://badge.fury.io/js/expo"><img src="https://badge.fury.io/js/expo.svg" alt="npm version" height="18"></a>
  <a href="https://badge.fury.io/js/sequelize"><img src="https://badge.fury.io/js/sequelize.svg" alt="npm version" height="18"></a>
 </p>
-
+<br>
+<br>
+<br>
 <p align="left">
 
   <img src="./img/homescreen.png" alt="Bundle Analyzer example"
-       width="200" height="200">
+       width="150" height="300">
+  <img src="./img/loggedin.png" alt="Bundle Analyzer example"
+       width="150" height="300">
+  <img src="./img/profile.png" alt="Bundle Analyzer example"
+       width="150" height="300">
+  <img src="./img/user.png" alt="Bundle Analyzer example"
+       width="150" height="300">
 </p>
 
 
