@@ -4,6 +4,7 @@ import {
   StyleSheet,
   Text,
   View,
+  ImageBackground
 } from 'react-native';
 
 import {GiftedChat, Actions, Bubble, SystemMessage} from 'react-native-gifted-chat';
@@ -120,7 +121,7 @@ export default class Example extends React.Component {
           createdAt: new Date(),
           user: {
             _id: 2,
-            name: 'React Native',
+            name: 'Mentor',
             // avatar: 'https://facebook.github.io/react/img/logo_og.png',
           },
         }),
@@ -203,6 +204,10 @@ export default class Example extends React.Component {
 
   render() {
     return (
+      <ImageBackground source={require('./images/3.jpg')}
+        style={styles.backgroundImage}>
+      
+        {this.props.children}
       <GiftedChat
         messages={this.state.messages}
         onSend={this.onSend}
@@ -220,6 +225,7 @@ export default class Example extends React.Component {
         renderCustomView={this.renderCustomView}
         renderFooter={this.renderFooter}
       />
+      </ImageBackground>
     );
   }
 }
@@ -235,59 +241,15 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: '#aaa',
   },
+  backgroundImage: {
+    flex: 1,
+      width: null,
+     height: 200,
+    
+    }
 });
 
 
 
-// import React, { Component } from 'react';
-// import { 
-//         Container, 
-//         Card,
-//         CardItem,
-//         Icon,
-//         Title, 
-//         Bodyutton,
-//         Header,
-//         Content,
-//         List,
-//         ListItem,
-//         Left,
-//         Body,
-//         Right,
-//         Text, 
-//         Thumbnail,
-//         Button
-//                   } from 'native-base';
-// export default class ListThumbnailExample extends Component {
-//   render() {
-//     return (
-//       <Container>
-//           <Header>
-//           <Left>
-//             <Button
-//               transparent
-//               onPress={() => this.props.navigation.navigate("DrawerOpen")}
-//             >
-//               <Icon name="menu" />
-//             </Button>
-//           </Left>
-//           <Body>
-//             <Title>User 1</Title>
-//           </Body>
-//           <Right />
-//         </Header>
-//         <Content>
-//           <List>
-//             <ListItem>
-//               <Thumbnail square size={80} source={{ uri: 'Image URL' }} />
-//               <Body>
-//                 <Text>Sankhadeep</Text>
-//                 <Text note>Its time to build a difference . .</Text>
-//               </Body>
-//             </ListItem>
-//           </List>
-//         </Content>
-//       </Container>
-//     );
-//   }
-// }
+
+

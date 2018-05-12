@@ -27,10 +27,15 @@ import {
         Thumbnail,
         Button
                   } from 'native-base';
+                  import { ImageBackground, StyleSheet} from "react-native";
 export default class ListAvatarExample extends Component {
   render() {
     const { navigate } = this.props.navigation;
     return (
+      <ImageBackground source={require('./images/3.jpg')}
+    style={styles.backgroundImage}>
+
+   {this.props.children}
       <Container>
           <Header>
           <Left>
@@ -42,7 +47,7 @@ export default class ListAvatarExample extends Component {
             </Button>
           </Left>
           <Body>
-            <Title>Conversations</Title>
+          <Title style={{width:500}}>Conversations</Title>
           </Body>
           <Right />
         </Header>
@@ -123,6 +128,26 @@ export default class ListAvatarExample extends Component {
           </List>
         </Content>
       </Container>
+      </ImageBackground>
     );
   }
 }
+const styles = StyleSheet.create({
+  footerContainer: {
+    marginTop: 5,
+    marginLeft: 10,
+    marginRight: 10,
+    marginBottom: 10,
+  },
+  footerText: {
+    fontSize: 14,
+    color: '#aaa',
+  },
+  backgroundImage: {
+    flex: 1,
+      width: null,
+     height: 200,
+    
+    }
+});
+
