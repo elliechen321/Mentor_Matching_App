@@ -24,39 +24,52 @@ import {
   Label,
   Input,
 
+
 } from "native-base";
 
 export default class Home extends React.Component {
-
-
+  
   constructor(props) {
     super(props);
     this.state = {
       myKey: null
     }
+   
   }
+  
 
+  
   // componentWillMount() {
   //   axios.get('http://10.55.110.251:3000/api/all').then(res => {
   //     console.log("AXIOS:", res.data)
   //   })
   // }
-
+  
   async logIn() {
     const { type, token } = await Expo.Facebook.logInWithReadPermissionsAsync('588219858226492', {
       permissions: ['public_profile'],
     });
     if (type === 'success') {
+      
       // Get the user's name using Facebook's Graph API
       const endpoint = 'https://graph.facebook.com/me?fields=id,email,name,picture&access_token='
       const response = await fetch(endpoint.concat(token)).then(response => response.json());
       let userInfo = {
         facebook: response.id,
-        fullName: response.name
-      }
+        fullName: response.name,
+       
+  
+      };
+      Alert.alert('You are successfully logged in!',
+    'Please create your profile');
+      
+     
+     
+     
       await axios.post('http://10.55.110.251:/api/all', userInfo).then(res => {
         console.log("AXIOS:" + res.data)
       })
+      
       console.log(response)
       console.log("hello")
     }
@@ -71,6 +84,7 @@ export default class Home extends React.Component {
       console.log("Error retrieving data " + error)
     }
   }
+  
 
   render() {
     return (
@@ -117,6 +131,7 @@ export default class Home extends React.Component {
                 "https://i.imgur.com/66gJs7L.png"
             }}
           />
+         
 
 
         </Content>
@@ -132,10 +147,29 @@ export default class Home extends React.Component {
 
           }}
           onPress={this.logIn}
+         
         >
           <Text>Login with Facebook</Text>
         </Button>
+        <Button
+        full
+        rounded
+        primary
+        style={{
+          marginTop: 600,
+          width: "80%",
+          alignSelf: "center",
+          position: "absolute"
 
+        }}
+        
+         onPress={() => this.props.navigation.navigate('Profile')}
+       
+        >
+        <Text>Create Profile</Text>
+        </Button>
+     
+        
       </Container>
     )
   };
