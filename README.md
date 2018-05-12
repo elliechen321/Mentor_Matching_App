@@ -4,7 +4,7 @@
 
 # Mentor Match
 
-<p align="left">
+<!-- <p align="left">
   <img src="https://i.imgur.com/v3x5i5T.png" alt="Bundle Analyzer example"
        width="200" height="200">
   <img src="https://i.imgur.com/v3x5i5T.png" alt="Bundle Analyzer example"
@@ -13,7 +13,7 @@
        width="200" height="200">
   <img src="https://i.imgur.com/v3x5i5T.png" alt="Bundle Analyzer example"
        width="200" height="200">
-</p>
+</p> -->
 
 <!-- 
 <p align="center">
@@ -38,11 +38,11 @@
 
 ## About
 
-  Mentor Match is a full-stack mobile application that aims to connect people in tech with similar skills, but different levels of experience. 
+Mentor Match is a mobile application for both professionals seeking mentorship and those looking to pay their expertise forward.
 
 ## How It Works
 
-  User's sign up and create a profile with current skills and work experience, and based their profile, Mentor Match will return other users that fit the Mentor / Mentee match and open a chat for users to interact.
+  User's sign up and create a profile with current skills and work experience, and based their profile, Mentor Match will return other users that fit the Mentor / Mentee match and open a chat for users to interact. Still in testing, .....something about the functionality of the app. and how each mentor / mentee is matched....
 
 ## Technologies
 
