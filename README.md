@@ -4,7 +4,7 @@
 
 # Mentor Match
 
-<p align="center">
+<p align="left">
   <img src="https://i.imgur.com/v3x5i5T.png" alt="Bundle Analyzer example"
        width="200" height="200">
   <img src="https://i.imgur.com/v3x5i5T.png" alt="Bundle Analyzer example"
