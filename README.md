@@ -24,6 +24,7 @@ Mentor Match is a mobile application for both professionals seeking mentorship a
        width="150" height="300" style="margin-right: 30px;">
   <img src="./img/user.png" alt="Bundle Analyzer example"
        width="150" height="300" style="margin-right: 30px;">
+
 </p>
 
 
