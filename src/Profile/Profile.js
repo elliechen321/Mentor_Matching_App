@@ -65,9 +65,8 @@ export default class Home extends React.Component {
   
   render() {
     return (
-      <ImageBackground source={require('./img/my-icon1.jpeg')}
+      <ImageBackground source={require('./img/cup.jpg')}
                   style={styles.backgroundImage}>
-
                   {this.props.children}
 
       <Container>
@@ -83,7 +82,7 @@ export default class Home extends React.Component {
           </Left>
           <Body>
           
-            <Title style={{fontSize:16,marginLeft:28, width:1000, height:22,fontFamily: 'Cochin',fontWeight: 'bold', color: '#009933'}}>Let us find the perfect Match for You!</Title>
+            <Title style={{fontSize:16,marginLeft:28, width:1000, height:22, color: '#000'}}>Let us find the perfect Match for You!</Title>
           </Body>
           
           <Right />
@@ -111,7 +110,7 @@ export default class Home extends React.Component {
               placeholder="Choose the area of expertise"
               iosIcon={<Icon name="ios-arrow-down-outline" />}
               placeholder="Choose the area of expertise"
-              textStyle={{ color: "#009933" }}
+              textStyle={{ color: "#000" }}
               itemStyle={{
                 backgroundColor: "#fff",
                 marginLeft: 0,
@@ -162,11 +161,11 @@ export default class Home extends React.Component {
            <Button
             full
             rounded
-            dark
+            blue
             style={{ marginTop: 26 }}
-            onPress={() => this.props.navigation.navigate("MatchScreen")}
+            onPress={() => this.props.navigation.navigate("Match")}
           >
-            <Text></Text>
+            <Text>Submit</Text>
           </Button>
 
         </Content>
