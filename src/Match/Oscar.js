@@ -33,6 +33,10 @@ export default class CardImageExample extends Component {
                            <Text> In hac habitasse platea dictumst. Praesent ut nisl sem. Quisque justo nisi, condimentum a scelerisque vel, blandit fermentum nunc. Nullam vel fringilla turpis, sit amet aliquet enim. Nunc gravida imperdiet fermentum. Ut cursus diam nec mauris tristique, eu vulputate eros gravida. Aenean felis tortor</Text>
                            <Text></Text>
                               <Button primary><Text> Request Match </Text></Button>
+                              <Text> </Text>
+                              <Button primary 
+                              onPress={() => this.props.navigation.navigate("NewChat")}
+                              ><Text> Message </Text></Button>
             <CardItem>
               <Left>
                 <Button transparent>
