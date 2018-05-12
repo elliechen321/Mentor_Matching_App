@@ -9,7 +9,7 @@ Mentor Match is a mobile application for both professionals seeking mentorship a
  <a href="https://badge.fury.io/js/react-native"><img src="https://badge.fury.io/js/react-native.svg" alt="npm version" height="18"></a>
  <a href="https://badge.fury.io/js/native-base"><img src="https://badge.fury.io/js/native-base.svg" alt="npm version" height="18"></a>
  <a href="https://badge.fury.io/js/expo"><img src="https://badge.fury.io/js/expo.svg" alt="npm version" height="18"></a>
- <a href="https://badge.fury.io/js/sequelize"><img src="https://badge.fury.io/js/sequelize.svg" alt="npm version" height="18"></a>
+ <a href="https://badge.fury.io/js/sequelize"><img src="https://badge.fury.io/js/sequelize.svg" alt="npm version" height="18" ></a>
 </p>
 <br>
 <br>
@@ -17,13 +17,13 @@ Mentor Match is a mobile application for both professionals seeking mentorship a
 <p align="left">
 
   <img src="./img/homescreen.png" alt="Bundle Analyzer example"
-       width="150" height="300">
+       width="150" height="300" style="margin-right: 30px;">
   <img src="./img/loggedin.png" alt="Bundle Analyzer example"
-       width="150" height="300">
+       width="150" height="300" style="margin-right: 30px;">
   <img src="./img/profile.png" alt="Bundle Analyzer example"
-       width="150" height="300">
+       width="150" height="300" style="margin-right: 30px;">
   <img src="./img/user.png" alt="Bundle Analyzer example"
-       width="150" height="300">
+       width="150" height="300" style="margin-right: 30px;">
 </p>
 
 
